@@ -482,6 +482,17 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px}.foot{display:flex;j
 .site-nav .nav-links a:hover{opacity:1}
 @media(max-width:900px){.site-nav .nav-links{gap:14px;font-size:9px}}
 </style>
+
+<style id="quartiere-hero-nav-fix">
+.site-nav{position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(1440px,calc(100% - 72px));margin:0;z-index:50;border-bottom:0;background:transparent;color:var(--paper);}
+.site-nav .logo,.site-nav .nav-links a{color:var(--paper);}
+.site-nav .nav-links a{opacity:.82;}
+@media(max-width:900px){.site-nav{width:calc(100% - 36px);}.site-nav .logo{color:var(--paper);}.site-nav .nav-links a{color:var(--paper);}}
+</style>
+
+<style id="quartiere-home-plane-fix">
+.hero-plane-image{position:absolute;z-index:4;top:9%;right:5.5%;width:min(230px,15vw);height:auto;pointer-events:none;}
+</style>
 </head>
 <body>
 <nav class="container site-nav"><a class="logo" href="./">QUARTIERE <span>Q4</span></a><div class="nav-links"><a href="what-we-do/">What We Do</a><a href="company/">Company</a><a href="contact/">Contact</a></div></nav>
@@ -496,13 +507,7 @@ better.</h1>
 </div>
 <div class="hero-art">
 <img alt="Formal garden beneath a deep blue, cloud-filled sky" src="assets/home-hero.jpg">
-<div class="hero-plane" aria-hidden="true">
-  <svg viewBox="0 0 120 60" role="presentation">
-    <path class="plane-trail trail-one" d="M2 39 C34 36 53 28 78 17" />
-    <path class="plane-trail trail-two" d="M4 46 C34 43 54 35 80 22" />
-    <path class="plane-body" d="M79 17 L96 11 L88 20 L109 22 L112 26 L88 23 L82 36 L78 35 L81 23 L68 22 L61 27 L58 26 L67 19 Z" />
-  </svg>
-</div>
+<img class="hero-plane-image" src="assets/home-plane.png" alt="" aria-hidden="true">
 </div>
 </div>
 </section>
