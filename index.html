@@ -490,55 +490,26 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px}.foot{display:flex;j
 @media(max-width:900px){.site-nav{width:calc(100% - 36px);}.site-nav .logo{color:var(--paper);}.site-nav .nav-links a{color:var(--paper);}}
 </style>
 
-
-<style id="quartiere-home-exact">
-.home-page{background:#000;}
-.home-page .site-nav{position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(1440px,calc(100% - 72px));height:88px;border-bottom:0;z-index:30;color:#f4ecdf;}
-.home-page .site-nav .logo{color:#f4ecdf;font:400 42px "Instrument Serif",serif;letter-spacing:-2px;margin-left:18px;}
-.home-page .site-nav .logo span{color:#f4ecdf;font:9px "DM Mono",monospace;letter-spacing:.14em;vertical-align:middle;margin-left:8px;}
-.home-page .site-nav .nav-links{display:flex;gap:34px;text-transform:uppercase;font:10px "DM Mono",monospace;letter-spacing:.16em;margin-right:18px;}
-.home-page .site-nav .nav-links a{color:#f4ecdf;text-decoration:none;}
-.home-page .home-hero{position:relative;width:100%;height:100vh;min-height:720px;overflow:hidden;color:#f4ecdf;background:#173f5e;}
-.home-page .home-hero-image{position:absolute;inset:0;background-image:url("assets/home-hero.jpg");background-repeat:no-repeat;background-size:100% 100%;background-position:center;}
-.home-page .home-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,25,21,.18),transparent 52%,rgba(15,25,21,.02));pointer-events:none;}
-.home-page .home-hero-copy{position:absolute;z-index:5;left:max(calc(50% - 630px),9%);top:17.5vh;width:620px;}
-.home-page .home-hero-copy h1{margin:0 0 20px;font:400 clamp(72px,6.5vw,100px)/.86 "Instrument Serif",serif;letter-spacing:-.055em;color:#f4ecdf;}
-.home-page .home-hero-copy p{margin:0;font:400 22px/1.35 "Manrope",sans-serif;color:#f4ecdf;letter-spacing:-.02em;}
-.home-page .home-explore{display:inline-block;margin-top:42px;color:#f4ecdf;text-decoration:none;font:10px "DM Mono",monospace;letter-spacing:.16em;text-transform:uppercase;}
-.home-page .home-explore span{font-size:18px;letter-spacing:0;margin-left:8px;vertical-align:-1px;}
-.home-page .home-footer{position:absolute;z-index:20;left:50%;bottom:22px;transform:translateX(-50%);width:min(1440px,calc(100% - 72px));color:#f4ecdf;}
-.home-page .home-footer-line{height:1px;background:rgba(244,236,223,.55);margin-bottom:12px;}
-.home-page .home-footer-row{display:flex;justify-content:space-between;align-items:flex-start;padding:0 0 0 0;}
-.home-page .home-footer-brand{font:15px "DM Mono",monospace;letter-spacing:.24em;text-transform:uppercase;}
-.home-page .home-footer-brand span{font-size:9px;letter-spacing:.12em;margin-left:6px;vertical-align:2px;}
-.home-page .home-footer-brand small{display:block;margin-top:16px;font:11px "Manrope",sans-serif;letter-spacing:0;text-transform:none;}
-.home-page .home-footer-nav{display:flex;align-items:flex-start;gap:34px;font:10px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;}
-.home-page .home-footer-nav a{color:#f4ecdf;text-decoration:none;}
-.home-page .home-footer-nav small{display:block;margin-left:28px;font:10px "Manrope",sans-serif;letter-spacing:0;text-transform:none;white-space:nowrap;}
-.home-page > main + .site-footer{display:none;}
-.home-page .intro{margin-top:0;}
-@media(max-width:900px){
- .home-page .site-nav{width:calc(100% - 36px);height:72px}.home-page .site-nav .logo{margin-left:0;font-size:34px}.home-page .site-nav .nav-links{gap:16px;margin-right:0;font-size:8px}.home-page .home-hero-copy{left:8%;top:18vh;width:82%}.home-page .home-hero-copy h1{font-size:clamp(58px,10vw,88px)}.home-page .home-hero-copy p{font-size:17px}.home-page .home-footer{width:calc(100% - 36px);bottom:16px}.home-page .home-footer-row{flex-direction:column;gap:16px}.home-page .home-footer-nav{gap:16px;flex-wrap:wrap}.home-page .home-footer-nav small{margin-left:0;width:100%;}}
-</style></head>
-<body class="home-page">
-<nav class="container site-nav home-nav"><a class="logo" href="./">QUARTIERE <span>Q4</span></a><div class="nav-links"><a href="what-we-do/">What We Do</a><a href="company/">Company</a><a href="contact/">Contact</a></div></nav>
-<section class="home-hero">
-  <div class="home-hero-image" aria-hidden="true"></div>
-  <div class="home-hero-copy">
-    <h1>Built for<br>a more human<br>future.</h1>
-    <p>Technology, capital and expertise<br>for a more resilient world.</p>
-    <a class="home-explore" href="what-we-do/">EXPLORE <span>→</span></a>
-  </div>
-<footer class="home-footer">
-  <div class="home-footer-line"></div>
-  <div class="home-footer-row">
-    <div class="home-footer-brand">QUARTIERE <span>Q4</span><small>Technology for a more human future.</small></div>
-    <nav class="home-footer-nav" aria-label="Footer navigation">
-      <a href="what-we-do/">WHAT WE DO</a><a href="company/">COMPANY</a><a href="contact/">CONTACT</a>
-      <small>© 2024 Quartiere. All rights reserved.</small>
-    </nav>
-  </div>
-</footer>
+<style id="quartiere-home-plane-fix">
+.hero-plane-image{position:absolute;z-index:4;top:9%;right:5.5%;width:min(230px,15vw);height:auto;pointer-events:none;}
+</style>
+</head>
+<body>
+<nav class="container site-nav"><a class="logo" href="./">QUARTIERE <span>Q4</span></a><div class="nav-links"><a href="what-we-do/">What We Do</a><a href="company/">Company</a><a href="contact/">Contact</a></div></nav>
+<section class="hero container q-hero-preserved">
+<div class="hero-copy">
+<h1>Technology should enable people,
+do what they do best,
+better.</h1>
+<div class="blue-line"></div>
+<p>We help organisations understand how people actually work, where technology can remove friction, and what needs to change for people to become more capable.</p>
+<div class="mono" style="margin-top:32px;color:#6a665d">People first. Technology where it helps.</div>
+</div>
+<div class="hero-art">
+<img alt="Formal garden beneath a deep blue, cloud-filled sky" src="assets/home-hero.jpg">
+<img class="hero-plane-image" src="assets/home-plane.png" alt="" aria-hidden="true">
+</div>
+</div>
 </section>
 <section class="intro q-system-overhaul" id="system">
 <div class="q-system-frame">
@@ -753,7 +724,21 @@ The human system remains.</h2></div>
 <div class="q-contact-action"><p>We start by understanding the work before deciding what to build.</p><button onclick="openModal('Start a conversation')">Start a conversation ↗</button></div>
 </div>
 </section>
-
+<footer class="site-footer">
+<div class="container site-footer-inner">
+  <a class="site-footer-brand" href="/">QUARTIERE <span>Q4</span></a>
+  <nav class="site-footer-nav" aria-label="Footer navigation">
+    <a href="/what-we-do/">What We Do</a>
+    <a href="/company/">Company</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+  <div class="site-footer-meta">Human capability<br>People · Work · Technology</div>
+</div>
+<div class="container site-footer-bottom">
+  <span>© 2026 Quartiere. All rights reserved.</span>
+  <span>Q4 / Human Capability</span>
+</div>
+</footer>
 <div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
 <div class="box"><button class="close" onclick="closeModal()">×</button><h2 id="modalTitle">Start a conversation</h2><p>Tell us what your organisation is trying to understand, build or change.</p>
 <form class="form" onsubmit="event.preventDefault();this.innerHTML='&lt;p&gt;Received. The next step is understanding the system.&lt;/p&gt;'"><input placeholder="Name" required=""/><input placeholder="Email" required="" type="email"/><textarea placeholder="What are you trying to change?" required=""></textarea><button>Send enquiry</button></form></div>
