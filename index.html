@@ -458,6 +458,15 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px}.foot{display:flex;j
   .site-footer-bottom{flex-direction:column;gap:6px}
 }
 </style>
+<style id="quartiere-navbar-consistency">
+.site-nav{height:80px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;position:relative;z-index:20}
+.site-nav .logo{font:400 42px 'Instrument Serif';letter-spacing:-2px}
+.site-nav .logo span{font:9px 'DM Mono';letter-spacing:.14em;vertical-align:middle;margin-left:8px}
+.site-nav .nav-links{display:flex;gap:32px;font:10px 'DM Mono';letter-spacing:.14em;text-transform:uppercase}
+.site-nav .nav-links a{opacity:.68}
+.site-nav .nav-links a:hover{opacity:1}
+@media(max-width:900px){.site-nav .nav-links{gap:14px;font-size:9px}}
+</style>
 </head>
 <body>
 <nav class="container site-nav"><a class="logo" href="./">QUARTIERE <span>Q4</span></a><div class="nav-links"><a href="what-we-do/">What We Do</a><a href="company/">Company</a><a href="contact/">Contact</a></div></nav>
