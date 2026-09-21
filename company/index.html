@@ -74,6 +74,14 @@
   .site-footer-bottom{flex-direction:column;gap:6px}
 }
 </style>
+<style id="quartiere-inner-hero-composition-fix">
+/* Preserve the complete hero image composition rather than zooming/cropping it. */
+.company-hero-scenic{min-height:0;height:auto;aspect-ratio:2 / 1;background:#183f5c}
+.company-hero-bg{background-size:contain;background-repeat:no-repeat;background-color:#183f5c}
+.company-hero-content{min-height:0;height:100%;display:flex;flex-direction:column;justify-content:center;padding:90px 0}
+@media(max-width:900px){.company-hero-scenic{aspect-ratio:4 / 3}.company-hero-content{padding:70px 0}}
+</style>
+
 </head><body><nav class="container site-nav"><a class="logo" href="../">QUARTIERE <span>Q4</span></a><div class="nav-links"><a href="../what-we-do/">What We Do</a><a href="../company/">Company</a><a href="../contact/">Contact</a></div></nav><main>
 <section class="company-hero company-hero-scenic">
 <div class="company-hero-bg" aria-hidden="true"></div>
