@@ -1,49 +1,46 @@
+import re
 from pathlib import Path
 
 path = Path("index.html")
 text = path.read_text(encoding="utf-8")
 
-# Stop the hero using the boxed container width.
+# Hero should not be a boxed container.
 text = text.replace(
     '<section class="hero container q-hero-preserved">',
     '<section class="hero q-hero-preserved">',
-    1,
 )
 
-SNIP = '''<style id="quartiere-kill-hero-frame">
-nav, .site-nav, .hero, .hero-art, .hero-copy {
+# Delete the actual source declarations instead of fighting them.
+subs = [
+    (r"nav\{height:86px;border-bottom:1px solid var\(--line\)", "nav{height:86px;border-bottom:0"),
+    (r"nav\{height:70px;border-bottom:1px solid var\(--line\)", "nav{height:70px;border-bottom:0"),
+    (r"\.site-nav\{height:80px;border-bottom:1px solid var\(--line\)", ".site-nav{height:80px;border-bottom:0"),
+    (r"nav\.q-nav-architectural\{height:86px;border-bottom:1px solid var\(--line\)", "nav.q-nav-architectural{height:86px;border-bottom:0"),
+    (r"\.hero-art:before\{content:\"\";position:absolute;inset:18px 18px 18px 0;border:1px solid rgba\(238,229,212,\.42\);z-index:2;pointer-events:none\}", ".hero-art:before,.hero-art::before{content:none!important;display:none!important;border:0!important}"),
+    (r"object-fit:contain", "object-fit:cover"),
+]
+for pat, repl in subs:
+    text, n = re.subn(pat, repl, text)
+    print(pat[:50], n)
+
+TAIL = '''<style id="quartiere-nav-border-kill">
+nav, .site-nav, .site-nav.container, .hero, .hero-art, .hero-copy {
   border: 0 !important;
+  border-bottom: 0 !important;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
   outline: 0 !important;
   box-shadow: none !important;
 }
-.hero-art:before, .hero-art::before,
-.hero-art:after, .hero-art::after,
-.hero:before, .hero::before {
-  content: none !important;
-  display: none !important;
-  border: 0 !important;
-}
 .hero.q-hero-preserved .hero-art img {
   object-fit: cover !important;
+  object-position: center center !important;
 }
-</style>
-<script id="quartiere-kill-hero-frame-js">
-(function () {
-  var art = document.querySelector(".hero-art");
-  if (art) {
-    art.style.border = "0";
-    art.style.outline = "none";
-  }
-  var hero = document.querySelector(".hero");
-  if (hero) {
-    hero.style.border = "0";
-    hero.classList.remove("container");
-  }
-})();
-</script>'''
+</style>'''
 
-if "quartiere-kill-hero-frame-js" not in text:
-    text = text.replace("</body>", SNIP + "</body>", 1)
+if "quartiere-nav-border-kill" not in text:
+    text = text.replace("</body>", TAIL + "</body>", 1)
 
 path.write_text(text, encoding="utf-8")
-print("updated index.html")
+print("done", path.stat().st_size)
