@@ -29,6 +29,11 @@
 }
 .site-footer-nav a { color: var(--ink); }
 .site-footer-nav a:hover { text-decoration: underline; }
+
+.site-footer-nav a.is-active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 .site-footer-meta {
   color: var(--muted, #625d53);
   font: 9px/1.8 "DM Mono", monospace;
