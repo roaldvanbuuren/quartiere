@@ -358,8 +358,40 @@ a {
 
 .leader {
   background:var(--paper);
-  min-height:330px;
-  padding:32px;
+  min-height:0;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden
+}
+
+.leader-photo {
+  display:block;
+  width:100%;
+  aspect-ratio:4 / 3;
+  object-fit:cover;
+  background:#d8d5cf;
+  filter:grayscale(1) contrast(.96)
+}
+
+.leader:nth-child(1) .leader-photo {
+  object-position:center 22%
+}
+
+.leader:nth-child(2) .leader-photo {
+  object-position:center 17%
+}
+
+.leader:nth-child(3) .leader-photo {
+  object-position:center 24%
+}
+
+.leader:nth-child(4) .leader-photo {
+  object-position:center 20%
+}
+
+.leader-copy {
+  flex:1;
+  padding:28px 32px 34px;
   display:flex;
   flex-direction:column;
   justify-content:flex-end
@@ -373,12 +405,12 @@ a {
 }
 
 .leader h3 {
-  font:400 55px 'Instrument Serif';
+  font:400 48px 'Instrument Serif';
   margin:12px 0 8px
 }
 
 .leader p {
-  max-width:420px;
+  max-width:500px;
   line-height:1.7;
   color:#5b574f
 }
