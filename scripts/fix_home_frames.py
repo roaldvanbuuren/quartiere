@@ -1,46 +1,56 @@
-import re
 from pathlib import Path
 
 path = Path("index.html")
 text = path.read_text(encoding="utf-8")
 
-# Hero should not be a boxed container.
-text = text.replace(
-    '<section class="hero container q-hero-preserved">',
-    '<section class="hero q-hero-preserved">',
-)
-
-# Delete the actual source declarations instead of fighting them.
-subs = [
-    (r"nav\{height:86px;border-bottom:1px solid var\(--line\)", "nav{height:86px;border-bottom:0"),
-    (r"nav\{height:70px;border-bottom:1px solid var\(--line\)", "nav{height:70px;border-bottom:0"),
-    (r"\.site-nav\{height:80px;border-bottom:1px solid var\(--line\)", ".site-nav{height:80px;border-bottom:0"),
-    (r"nav\.q-nav-architectural\{height:86px;border-bottom:1px solid var\(--line\)", "nav.q-nav-architectural{height:86px;border-bottom:0"),
-    (r"\.hero-art:before\{content:\"\";position:absolute;inset:18px 18px 18px 0;border:1px solid rgba\(238,229,212,\.42\);z-index:2;pointer-events:none\}", ".hero-art:before,.hero-art::before{content:none!important;display:none!important;border:0!important}"),
-    (r"object-fit:contain", "object-fit:cover"),
-]
-for pat, repl in subs:
-    text, n = re.subn(pat, repl, text)
-    print(pat[:50], n)
-
-TAIL = '''<style id="quartiere-nav-border-kill">
-nav, .site-nav, .site-nav.container, .hero, .hero-art, .hero-copy {
+old = """.hero-art:before, .hero-art::before,
+.hero-art:after, .hero-art::after,
+.hero:before, .hero::before {
+  content: none !important;
+  display: none !important;
   border: 0 !important;
-  border-bottom: 0 !important;
-  border-top: 0 !important;
-  border-left: 0 !important;
-  border-right: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
+}"""
+
+new = """.hero-art:before, .hero-art::before,
+.hero:before, .hero::before {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+}"""
+
+if old in text:
+    text = text.replace(old, new)
+    print("stripped after-kill")
+else:
+    print("after-kill block not found exactly")
+    # fallback: stop hiding after
+    text = text.replace(".hero-art:after, .hero-art::after,", "")
+    print("fallback applied")
+
+SCRIM = '''<style id="quartiere-home-text-scrim">
+.hero.q-hero-preserved .hero-art::after,
+.hero.q-hero-preserved .hero-art:after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  border: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  background:
+    linear-gradient(90deg, rgba(18,29,25,.88) 0%, rgba(18,29,25,.68) 25%, rgba(18,29,25,.28) 48%, rgba(18,29,25,0) 72%),
+    linear-gradient(0deg, rgba(18,29,25,.32), transparent 42%) !important;
 }
-.hero.q-hero-preserved .hero-art img {
-  object-fit: cover !important;
-  object-position: center center !important;
-}
+.hero.q-hero-preserved .hero-copy { position: relative; z-index: 3; }
 </style>'''
 
-if "quartiere-nav-border-kill" not in text:
-    text = text.replace("</body>", TAIL + "</body>", 1)
+if "quartiere-home-text-scrim" not in text:
+    text = text.replace("</body>", SCRIM + "</body>", 1)
+    print("added scrim")
 
 path.write_text(text, encoding="utf-8")
-print("done", path.stat().st_size)
+print("wrote", path.stat().st_size)
