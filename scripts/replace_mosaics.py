@@ -118,18 +118,18 @@ def patch_company(path: Path) -> None:
     html = path.read_text(encoding="utf-8")
     html, n1 = replace_img_src(
         html,
-        "../assets/mosaic-table.jpg",
+        "../assets/mosaic-network.jpg",
         alt="Ancient mosaic with a geometric network at its centre",
-        new_alt="Mosaic of four figures in discussion around a table",
+        new_alt="Mosaic of figures beneath a constellation of connected nodes",
     )
     html, n2 = replace_img_src(
         html,
-        "../assets/mosaic-network.jpg",
+        "../assets/mosaic-service.jpg",
         alt="Person working with technology in a considered environment",
-        new_alt="Mosaic of figures beneath a constellation of connected nodes",
+        new_alt="Mosaic of figures gathered at a service counter",
     )
     path.write_text(html, encoding="utf-8")
-    print(f"{path}: table={n1} network={n2} size={path.stat().st_size}")
+    print(f"{path}: network={n1} service={n2} size={path.stat().st_size}")
 
 
 def main() -> None:
