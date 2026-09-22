@@ -1,0 +1,67 @@
+/* Unified Quartiere navbar — same treatment on every page, readable on light and dark heroes */
+.site-nav{
+  position:absolute !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  transform:none !important;
+  width:100% !important;
+  max-width:none !important;
+  height:96px !important;
+  margin:0 !important;
+  padding:0 36px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  border:0 !important;
+  border-bottom:0 !important;
+  background:linear-gradient(180deg, rgba(8,12,11,.82) 0%, rgba(8,12,11,.46) 52%, rgba(8,12,11,0) 100%) !important;
+  color:#f6efe2 !important;
+  z-index:80 !important;
+  box-sizing:border-box !important;
+}
+@media (min-width:1500px){
+  .site-nav{padding:0 calc((100vw - 1440px) / 2 + 36px) !important;}
+}
+.site-nav .logo{
+  font:400 42px/1 "Instrument Serif",serif !important;
+  letter-spacing:-2px !important;
+  color:#f6efe2 !important;
+  text-shadow:0 1px 16px rgba(0,0,0,.4);
+}
+.site-nav .logo span{
+  font:9px/1 "DM Mono",monospace !important;
+  letter-spacing:.16em !important;
+  vertical-align:middle !important;
+  margin-left:8px !important;
+  color:#f6efe2 !important;
+}
+.site-nav .nav-links{
+  display:flex !important;
+  align-items:center !important;
+  gap:28px !important;
+  font:10px/1 "DM Mono",monospace !important;
+  letter-spacing:.14em !important;
+  text-transform:uppercase !important;
+}
+.site-nav .nav-links a{
+  color:#f6efe2 !important;
+  opacity:1 !important;
+  text-shadow:0 1px 12px rgba(0,0,0,.4);
+}
+.site-nav .nav-links a:hover{
+  text-decoration:underline;
+  text-underline-offset:6px;
+}
+.site-nav .nav-links a.is-active{
+  text-decoration:underline;
+  text-underline-offset:6px;
+}
+@media (max-width:900px){
+  .site-nav{height:84px !important; padding:0 18px !important;}
+  .site-nav .logo{font-size:34px !important;}
+  .site-nav .nav-links{gap:16px !important; font-size:9px !important;}
+}
+@media (max-width:650px){
+  .site-nav .nav-links{display:flex !important;}
+}
