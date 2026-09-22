@@ -151,11 +151,22 @@ a {
 }
 
 .lab .type {
+  display:inline-flex;
+  align-items:center;
+  align-self:flex-start;
+  width:fit-content;
+  max-width:100%;
+  min-height:34px;
+  padding:0 13px;
+  border:1px solid rgba(23,35,31,.2);
+  background-color:rgba(238,229,212,.78);
+  background-image:radial-gradient(circle,rgba(109,113,82,.3) 1px,transparent 1.5px);
+  background-size:8px 8px;
   font:10px 'DM Mono';
   letter-spacing:.12em;
   text-transform:uppercase;
-  color:#777066;
-  margin-top:10px
+  color:#4f4d45;
+  margin-top:12px
 }
 
 .lab h2 {
