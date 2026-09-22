@@ -7,7 +7,7 @@
   transform:none !important;
   width:100% !important;
   max-width:none !important;
-  height:96px !important;
+  height:112px !important;
   margin:0 !important;
   padding:0 36px !important;
   display:flex !important;
@@ -24,23 +24,23 @@
   .site-nav{padding:0 calc((100vw - 1440px) / 2 + 36px) !important;}
 }
 .site-nav .logo{
-  font:400 42px/1 "Instrument Serif",serif !important;
+  font:400 56px/1 "Instrument Serif",serif !important;
   letter-spacing:-2px !important;
   color:#f6efe2 !important;
   text-shadow:0 1px 16px rgba(0,0,0,.4);
 }
 .site-nav .logo span{
-  font:9px/1 "DM Mono",monospace !important;
+  font:12px/1 "DM Mono",monospace !important;
   letter-spacing:.16em !important;
   vertical-align:middle !important;
-  margin-left:8px !important;
+  margin-left:10px !important;
   color:#f6efe2 !important;
 }
 .site-nav .nav-links{
   display:flex !important;
   align-items:center !important;
-  gap:28px !important;
-  font:10px/1 "DM Mono",monospace !important;
+  gap:32px !important;
+  font:14px/1 "DM Mono",monospace !important;
   letter-spacing:.14em !important;
   text-transform:uppercase !important;
 }
@@ -51,17 +51,33 @@
 }
 .site-nav .nav-links a:hover{
   text-decoration:underline;
-  text-underline-offset:6px;
+  text-underline-offset:7px;
 }
 .site-nav .nav-links a.is-active{
   text-decoration:underline;
-  text-underline-offset:6px;
+  text-underline-offset:7px;
 }
 @media (max-width:900px){
-  .site-nav{height:84px !important; padding:0 18px !important;}
-  .site-nav .logo{font-size:34px !important;}
-  .site-nav .nav-links{gap:16px !important; font-size:9px !important;}
+  .site-nav{height:92px !important; padding:0 18px !important;}
+  .site-nav .logo{font-size:42px !important;}
+  .site-nav .logo span{font-size:11px !important;}
+  .site-nav .nav-links{gap:18px !important; font-size:12px !important;}
 }
 @media (max-width:650px){
   .site-nav .nav-links{display:flex !important;}
+}
+
+/* Home: remove the hairline frames around the hero and service images */
+.hero-art{
+  border:0 !important;
+}
+.hero-art::before{
+  content:none !important;
+  display:none !important;
+  border:0 !important;
+}
+.q-service-image::after{
+  content:none !important;
+  display:none !important;
+  border:0 !important;
 }
