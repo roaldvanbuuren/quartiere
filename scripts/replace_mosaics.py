@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Decode mosaic JPEGs into assets/ and point non-hero slots at them."""
+"""Put mosaic JPEGs in assets/ and point non-hero slots at them."""
 from __future__ import annotations
 
 import base64
 import re
+import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,28 +19,58 @@ MOSAICS = {
     "mosaic-enable.jpg": "mosaic-enable.jpg.b64",
 }
 
+# Transfer-only sources; files are copied into assets/ and served from the repo.
+MOSAIC_URLS = {
+    "mosaic-network.jpg": "https://i.imgur.com/gcpXbSJ.jpeg",
+    "mosaic-laptops.jpg": "https://i.imgur.com/4GY7bCv.jpeg",
+    "mosaic-table.jpg": "https://i.imgur.com/OQE29td.jpeg",
+    "mosaic-service.jpg": "https://i.imgur.com/6rv07xs.jpeg",
+    "mosaic-enable.jpg": "https://i.imgur.com/qdBqKus.jpeg",
+}
+
 IMG_TAG = re.compile(r"<img\b[^>]*>", re.I)
 
 
-def _load_b64(src_name: str) -> str:
+def _load_b64(src_name: str) -> str | None:
     whole = B64_DIR / src_name
     if whole.exists():
         return "".join(whole.read_text().split())
     parts = sorted(B64_DIR.glob(src_name + ".p*"))
     if not parts:
-        raise FileNotFoundError(src_name)
+        return None
     return "".join(p.read_text().strip() for p in parts)
+
+
+def _download(url: str, dest: Path) -> bytes:
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "QuartiereMosaicBot/1.0",
+            "Referer": "https://imgur.com/",
+            "Accept": "image/jpeg,image/*;q=0.8,*/*;q=0.5",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        data = resp.read()
+    if not data.startswith(b"\xff\xd8"):
+        raise RuntimeError(f"not a jpeg from {url}: {data[:40]!r}")
+    dest.write_bytes(data)
+    return data
 
 
 def decode_assets() -> None:
     ASSETS.mkdir(exist_ok=True)
     B64_DIR.mkdir(parents=True, exist_ok=True)
     for dest_name, src_name in MOSAICS.items():
-        raw = _load_b64(src_name)
-        data = base64.b64decode(raw)
         out = ASSETS / dest_name
-        out.write_bytes(data)
-        print(f"wrote {out.relative_to(ROOT)} ({len(data)} bytes)")
+        raw = _load_b64(src_name)
+        if raw:
+            data = base64.b64decode(raw)
+            out.write_bytes(data)
+            print(f"wrote {out.relative_to(ROOT)} from b64 ({len(data)} bytes)")
+            continue
+        data = _download(MOSAIC_URLS[dest_name], out)
+        print(f"wrote {out.relative_to(ROOT)} from url ({len(data)} bytes)")
 
 
 def replace_img_src(html: str, new_src: str, *, alt: str | None = None, cls: str | None = None, new_alt: str | None = None) -> tuple[str, int]:
