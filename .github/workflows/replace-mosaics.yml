@@ -1,0 +1,22 @@
+name: Replace mosaics
+
+on:
+  workflow_dispatch:
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode mosaics and retarget HTML
+        run: python3 scripts/replace_mosaics.py
+      - name: Commit
+        run: |
+          git config user.name ELOCollective
+          git config user.email tech@elocollective.com
+          git add assets/mosaic-*.jpg index.html what-we-do/index.html company/index.html
+          git diff --cached --stat
+          git commit -m "Replace repeated inline mosaics with themed asset images" || echo no changes
+          git push
