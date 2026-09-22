@@ -216,6 +216,30 @@ a {
   opacity:.22
 }
 
+.lab:nth-child(1):after {
+  background-image:repeating-radial-gradient(circle at 54% 48%,transparent 0 8px,rgba(53,69,54,.32) 9px 10px,transparent 11px 18px);
+  background-size:120px 120px;
+  opacity:.55
+}
+
+.lab:nth-child(2):after {
+  background-image:radial-gradient(circle,var(--blue) 0 1.5px,transparent 2px),repeating-linear-gradient(45deg,transparent 0 10px,rgba(42,112,161,.2) 10px 11px,transparent 11px 21px),repeating-linear-gradient(-45deg,transparent 0 10px,rgba(42,112,161,.2) 10px 11px,transparent 11px 21px);
+  background-size:14px 14px,42px 42px,42px 42px;
+  opacity:.34
+}
+
+.lab:nth-child(3):after {
+  background-image:radial-gradient(circle at 10px 10px,var(--olive) 0 2px,transparent 2.5px),linear-gradient(30deg,transparent 48.5%,rgba(53,69,54,.28) 49.5% 50.5%,transparent 51.5%),linear-gradient(-30deg,transparent 48.5%,rgba(53,69,54,.28) 49.5% 50.5%,transparent 51.5%);
+  background-size:32px 32px,32px 32px,32px 32px;
+  opacity:.42
+}
+
+.lab:nth-child(4):after {
+  background-image:repeating-conic-gradient(from 45deg,rgba(42,112,161,.26) 0 25%,transparent 0 50%);
+  background-size:16px 16px;
+  opacity:.48
+}
+
 .dark-band {
   background:var(--ink);
   color:var(--paper);
