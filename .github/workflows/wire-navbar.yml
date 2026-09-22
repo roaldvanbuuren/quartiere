@@ -1,0 +1,53 @@
+name: Wire shared navbar
+on:
+  workflow_dispatch:
+jobs:
+  wire:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inject nav stylesheet
+        run: |
+          python3 << 'PY'
+          from pathlib import Path
+          import re
+          pages = {
+            "index.html": ("assets/site-nav.css", "./", [("what-we-do/", "What We Do"), ("company/", "Company"), ("contact/", "Contact")], None),
+            "what-we-do/index.html": ("../assets/site-nav.css", "../", [("../what-we-do/", "What We Do"), ("../company/", "Company"), ("../contact/", "Contact")], "what-we-do"),
+            "company/index.html": ("../assets/site-nav.css", "../", [("../what-we-do/", "What We Do"), ("../company/", "Company"), ("../contact/", "Contact")], "company"),
+          }
+          MARK = 'data-quartiere-nav="1"'
+          for rel, (href, home, links, active) in pages.items():
+              path = Path(rel)
+              text = path.read_text(encoding="utf-8")
+              if MARK not in text:
+                  link = f'<link {MARK} rel="stylesheet" href="{href}">'
+                  if "</head>" not in text:
+                      raise SystemExit(f"no head in {rel}")
+                  text = text.replace("</head>", link + "</head>", 1)
+              items = []
+              for url, label in links:
+                  slug = url.strip("/").split("/")[-1]
+                  cls = ' class="is-active"' if active == slug else ""
+                  items.append(f'<a href="{url}"{cls}>{label}</a>')
+              nav = (
+                  f'<nav class="container site-nav">'
+                  f'<a class="logo" href="{home}">QUARTIERE <span>Q4</span></a>'
+                  f'<div class="nav-links">{ "".join(items) }</div>'
+                  f"</nav>"
+              )
+              text2, n = re.subn(r'<nav class="container site-nav">.*?</nav>', nav, text, count=1, flags=re.S)
+              print("nav replace", rel, n)
+              path.write_text(text2 if n == 1 else text, encoding="utf-8")
+              print("patched", rel)
+          PY
+      - name: Commit and push
+        run: |
+          git config user.name "ELOCollective"
+          git config user.email "tech@elocollective.com"
+          git add index.html what-we-do/index.html company/index.html
+          git diff --cached --stat
+          git commit -m "Wire shared navbar on home, company, and what-we-do" || echo "no changes"
+          git push
