@@ -496,7 +496,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px}.foot{display:flex;j
 <link data-quartiere-nav="1" rel="stylesheet" href="assets/quartiere-nav.css"><style id="quartiere-home-frame-kill">.hero-art,.hero.q-hero-preserved .hero-art{border:0!important;outline:0!important}.hero-art:before,.hero-art::before,.hero.q-hero-preserved .hero-art:before,.hero.q-hero-preserved .hero-art::before,.q-service-image:after,.q-service-image::after{content:none!important;display:none!important;border:0!important;opacity:0!important;visibility:hidden!important}</style></head>
 <body>
 <nav class="container site-nav"><a class="logo" href="./">QUARTIERE <span>Q4</span></a><div class="nav-links"><a href="what-we-do/">What We Do</a><a href="company/">Company</a><a href="contact/">Contact</a></div></nav>
-<section class="hero container q-hero-preserved">
+<section class="hero q-hero-preserved">
 <div class="hero-copy">
 <h1>Technology should enable people,
 do what they do best,
@@ -830,7 +830,37 @@ nav.q-nav-architectural .links a{font-family:var(--mono);font-size:10px;letter-s
 .q-contact-overhaul{background:var(--ink);color:var(--paper);padding:120px 0}.q-contact-frame{width:min(1240px,calc(100% - 72px));margin:auto;border:1px solid rgba(238,229,212,.3);min-height:470px;display:grid;grid-template-columns:120px 1.4fr .7fr;position:relative}.q-contact-frame:before,.q-contact-frame:after{content:"";position:absolute;background:rgba(238,229,212,.3)}.q-contact-frame:before{left:119px;top:0;bottom:0;width:1px}.q-contact-frame:after{left:0;right:0;top:72px;height:1px}.q-contact-mark{font-family:var(--serif);font-size:74px;display:flex;align-items:center;justify-content:center;padding-top:72px}.q-contact-copy{padding:125px 65px 60px}.q-contact-copy h2{font-family:var(--serif);font-weight:400;font-size:clamp(50px,6vw,88px);line-height:.9;letter-spacing:-.045em;margin:20px 0 0}.q-contact-action{border-left:1px solid rgba(238,229,212,.22);padding:125px 48px 60px;display:flex;flex-direction:column;justify-content:space-between}.q-contact-action p{font-size:14px;line-height:1.65;color:#c4beb0;max-width:280px}.q-contact-action button{align-self:flex-start;border:1px solid rgba(238,229,212,.75);background:transparent;color:var(--paper);padding:13px 18px;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase}
 @media(max-width:900px){.container{width:min(100% - 36px,1240px)}.hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding:60px 28px}.hero-art{min-height:520px}.q-nav-note{display:none}.q-system-frame,.q-proof-frame{width:calc(100% - 36px)}.q-system-grid,.q-system-material,.q-capability-header,.q-proof-heading{grid-template-columns:1fr}.q-system-detail{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}.q-service-overhaul{grid-template-columns:1fr}.q-service-image{min-height:460px}.q-service-copy{padding:60px 28px}.q-capability-overhaul .process-overview{grid-template-columns:1fr 1fr}.q-capability-overhaul .process-overview-card{border-bottom:1px solid var(--line)}.q-archive{grid-template-columns:1fr}.q-archive-wide{grid-row:auto}.q-contact-frame{grid-template-columns:1fr;min-height:0}.q-contact-mark{display:none}.q-contact-frame:before{display:none}.q-contact-frame:after{top:72px}.q-contact-copy{padding:120px 30px 50px}.q-contact-action{border-left:0;border-top:1px solid rgba(238,229,212,.22);padding:35px 30px}.q-fit-hero-overhaul{height:620px}}
 @media(max-width:600px){.q-capability-overhaul .process-overview{grid-template-columns:1fr}.q-capability-header{gap:24px}.q-system-overhaul,.q-capability-overhaul,.q-proof-overhaul,.q-contact-overhaul{padding:80px 0}.q-material-caption{padding:26px}.q-material-caption p{font-size:24px}}
-</style><style id="quartiere-home-frame-kill-tail">.hero-art:before,.hero-art::before{content:none!important;display:none!important;border:none!important}</style></body>
+</style><style id="quartiere-home-frame-kill-tail">.hero-art:before,.hero-art::before{content:none!important;display:none!important;border:none!important}</style><style id="quartiere-kill-hero-frame">
+nav, .site-nav, .hero, .hero-art, .hero-copy {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+.hero-art:before, .hero-art::before,
+.hero-art:after, .hero-art::after,
+.hero:before, .hero::before {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+}
+.hero.q-hero-preserved .hero-art img {
+  object-fit: cover !important;
+}
+</style>
+<script id="quartiere-kill-hero-frame-js">
+(function () {
+  var art = document.querySelector(".hero-art");
+  if (art) {
+    art.style.border = "0";
+    art.style.outline = "none";
+  }
+  var hero = document.querySelector(".hero");
+  if (hero) {
+    hero.style.border = "0";
+    hero.classList.remove("container");
+  }
+})();
+</script></body>
 
 <style id="quartiere-hero-bleed-overhaul">
 /* Full-bleed editorial hero */
