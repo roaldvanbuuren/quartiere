@@ -21,10 +21,21 @@ MOSAICS = {
 IMG_TAG = re.compile(r"<img\b[^>]*>", re.I)
 
 
+def _load_b64(src_name: str) -> str:
+    whole = B64_DIR / src_name
+    if whole.exists():
+        return "".join(whole.read_text().split())
+    parts = sorted(B64_DIR.glob(src_name + ".p*"))
+    if not parts:
+        raise FileNotFoundError(src_name)
+    return "".join(p.read_text().strip() for p in parts)
+
+
 def decode_assets() -> None:
     ASSETS.mkdir(exist_ok=True)
+    B64_DIR.mkdir(parents=True, exist_ok=True)
     for dest_name, src_name in MOSAICS.items():
-        raw = (B64_DIR / src_name).read_text().strip()
+        raw = _load_b64(src_name)
         data = base64.b64decode(raw)
         out = ASSETS / dest_name
         out.write_bytes(data)
