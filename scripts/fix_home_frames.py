@@ -1,29 +1,41 @@
+import re
 from pathlib import Path
 
-INLINE = (
-    '<style id="quartiere-home-frame-kill">'
-    ".hero-art,.hero.q-hero-preserved .hero-art{border:0!important;outline:0!important}"
-    ".hero-art:before,.hero-art::before,"
-    ".hero.q-hero-preserved .hero-art:before,.hero.q-hero-preserved .hero-art::before,"
-    ".q-service-image:after,.q-service-image::after"
-    "{content:none!important;display:none!important;border:0!important;opacity:0!important;visibility:hidden!important}"
-    "</style>"
-)
+path = Path("index.html")
+text = path.read_text(encoding="utf-8")
 
-files = [
-    "index.html",
-    "what-we-do/index.html",
-    "company/index.html",
-    "contact/index.html",
+replacements = [
+    (
+        ".hero-art:before{content:\"\";position:absolute;inset:18px 18px 18px 0;border:1px solid rgba(238,229,212,.42);z-index:2;pointer-events:none}",
+        ".hero-art:before,.hero-art::before{content:none!important;display:none!important;border:0!important;inset:auto!important}",
+    ),
+    (
+        ".hero-art{min-height:720px;position:relative;overflow:hidden;border-left:1px solid var(--line)}",
+        ".hero-art{min-height:720px;position:relative;overflow:hidden;border:0}",
+    ),
+    (
+        ".hero{min-height:720px;display:grid;grid-template-columns:43% 57%;border-left:1px solid var(--line);border-right:1px solid var(--line)}",
+        ".hero{min-height:720px;display:grid;grid-template-columns:43% 57%;border:0}",
+    ),
+    (
+        ".q-service-image:after{content:\"\";position:absolute;inset:32px;border:1px solid rgba(238,229,212,.35)}",
+        ".q-service-image:after,.q-service-image::after{content:none!important;display:none!important;border:0!important}",
+    ),
+    (
+        ".q-image-rule{position:absolute;left:32px;right:32px;bottom:32px;border-top:1px solid rgba(238,229,212,.35)}",
+        ".q-image-rule{display:none!important}",
+    ),
 ]
 
-for rel in files:
-    path = Path(rel)
-    text = path.read_text(encoding="utf-8")
-    text = text.replace("assets/site-nav.css", "assets/quartiere-nav.css")
-    if rel == "index.html" and "quartiere-home-frame-kill" not in text:
-        if "</head>" not in text:
-            raise SystemExit("no head in index.html")
-        text = text.replace("</head>", INLINE + "</head>", 1)
-    path.write_text(text, encoding="utf-8")
-    print("patched", rel)
+for old, new in replacements:
+    count = text.count(old)
+    print("match", count, old[:60])
+    if count:
+        text = text.replace(old, new)
+
+TAIL = '<style id="quartiere-home-frame-kill-tail">.hero-art:before,.hero-art::before{content:none!important;display:none!important;border:none!important}</style>'
+if "quartiere-home-frame-kill-tail" not in text:
+    text = text.replace("</body>", TAIL + "</body>", 1)
+
+path.write_text(text, encoding="utf-8")
+print("wrote", path.stat().st_size)
