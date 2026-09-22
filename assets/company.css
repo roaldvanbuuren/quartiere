@@ -394,7 +394,7 @@ a {
   padding:28px 32px 34px;
   display:flex;
   flex-direction:column;
-  justify-content:flex-end
+  justify-content:flex-start
 }
 
 .leader .role {
