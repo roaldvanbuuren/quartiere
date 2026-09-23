@@ -786,3 +786,14 @@
 a.i-item{color:inherit;text-decoration:none}
 a.i-item:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
 .i-item .i-meta em.i-read{border-color:#17231f;color:#17231f}
+
+/* Insights from Markdown */
+.a-cover{margin:0 0 50px}
+.a-cover img{width:100%;height:auto;display:block;border:1px solid rgba(23,35,31,.15)}
+.a-body a{color:#2a70a1;border-bottom:1px solid currentColor}
+.a-body ul,.a-body ol{margin:0 0 22px;padding-left:22px}
+.a-body li{margin-bottom:8px}
+.a-body img{max-width:100%;height:auto}
+.a-body h3{margin-top:10px}
+.a-body .a-label + h3{margin-top:8px}
+.a-body .a-label{margin-top:56px}

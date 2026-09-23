@@ -1,0 +1,34 @@
+# Decap CMS: the Insights editor at /admin.
+# Saving a post commits a Markdown file to content/insights/ on GitHub;
+# Vercel then rebuilds the site and the post goes live in about a minute.
+backend:
+  name: github
+  repo: ELOCollective/quartiere-vercel
+  branch: main
+
+site_url: /
+display_url: /insights/
+media_folder: assets/insights
+public_folder: /assets/insights
+
+collections:
+  - name: insights
+    label: Insights
+    label_singular: Post
+    description: "Articles for quartiere/insights. Tip: a line starting with ###### becomes a small blue section label, and a > quote becomes a large callout."
+    folder: content/insights
+    create: true
+    slug: "{{slug}}"
+    sortable_fields: [date, title]
+    summary: "{{title}} · {{date | date('D MMM YYYY')}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: Author, name: author, widget: string, default: "Roald van Buuren" }
+      - { label: Type, name: kind, widget: select, options: [Research, Opinion, Interview, Field notes, News], default: Opinion }
+      - { label: Summary (shown in the Insights list), name: summary, widget: text }
+      - { label: Subtitle (optional, under the title), name: subtitle, widget: string, required: false }
+      - { label: Cover image (optional), name: cover, widget: image, required: false }
+      - { label: Cover description (for screen readers), name: cover_alt, widget: string, required: false }
+      - { label: Hide from the site (draft), name: draft, widget: boolean, default: false, required: false }
+      - { label: Article, name: body, widget: markdown }

@@ -1,0 +1,13 @@
+{
+  "name": "quartiere-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-insights.mjs && node scripts/package-site.mjs",
+    "insights": "node scripts/build-insights.mjs"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^14.1.4"
+  }
+}

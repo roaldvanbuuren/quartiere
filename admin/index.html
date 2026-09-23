@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Quartiere · Insights editor</title>
+  <link href="config.yml" type="text/yaml" rel="cms-config-url">
+</head>
+<body>
+  <script>window.CMS_MANUAL_INIT = true;</script>
+  <script src="https://unpkg.com/decap-cms@^3.3.3/dist/decap-cms.js"></script>
+  <script>
+    // Logs in through this site's own /api/auth (GitHub OAuth), whatever domain it is served from.
+    CMS.init({ config: { backend: { name: "github", repo: "ELOCollective/quartiere-vercel", branch: "main", base_url: window.location.origin, auth_endpoint: "api/auth" } } });
+    CMS.registerPreviewStyle("../assets/q4-labs.css");
+    CMS.registerPreviewStyle("../assets/product.css");
+  </script>
+</body>
+</html>
