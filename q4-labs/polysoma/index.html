@@ -23,7 +23,7 @@
     <p class="p-promise">Test the decision before you make it.</p>
     <p class="p-lede">Polysoma builds a population from what people actually did, not what they say they would do. Put a decision in front of it and get a distribution of outcomes with a stated confidence level.</p>
     <span class="p-type">Decision simulation</span>
-    <div class="p-actions"><a class="p-btn solid" href="../../contact/#enquiry">Book a demo ↗</a><a class="p-btn" href="#how">How it works ↓</a></div>
+    <div class="p-actions"><a class="p-btn solid" href="../../contact/#enquiry">Book a demo →</a><a class="p-btn" href="#how">How it works ↓</a></div>
   </div>
 </section>
 <section class="section">
@@ -32,7 +32,61 @@
       <div><span class="kicker">01 / The problem</span></div>
       <div><h2>Surveys tell you what people say. Decisions depend on what they do.</h2><p>Price changes, crisis responses and retention offers are usually tested with surveys and panels: individuals answering one at a time, reporting what they think they would do.</p><p>Real people do not decide in isolation. They react to each other: contagion, pile-ons, and the silent majority that quietly stops spending. Polysoma models that.</p></div>
     </div>
-    <div class="p-shot" role="img" aria-label="Polysoma product screenshot placeholder"><b>Polysoma</b><span>Product screenshot · coming soon</span></div>
+
+    <figure class="pconsole" aria-label="Example Polysoma run">
+      <figcaption class="pc-bar"><span>Polysoma console</span><span>Example run · illustrative</span></figcaption>
+      <div class="pc-grid">
+        <div class="pc-col">
+          <div class="pc-block">
+            <div class="pc-label">01 · Context ingested</div>
+            <ul class="pc-files"><li>pricing_deck_q3.pdf<b>PARSED</b></li><li>churn_export.csv<b>PARSED</b></li><li>community_guidelines.md<b>PARSED</b></li><li>2025_research_readout.pptx<b>PARSED</b></li></ul>
+            <div class="pc-note">4 files · 1.2M tokens · held in EU</div>
+          </div>
+          <div class="pc-block">
+            <div class="pc-label">02 · Question</div>
+            <p class="pc-q">If we raise the mid tier from £9 to £12 in Q1, what happens to retention?</p>
+            <div class="pc-ok">✓ Simulable: outcome defined, date attached</div>
+          </div>
+          <div class="pc-block">
+            <div class="pc-label">03 · Proposed parameters</div>
+            <table class="pc-params"><tbody>
+              <tr><td>Population</td><td>30,000 agents</td><td>default</td></tr>
+              <tr><td>Segments</td><td>4</td><td>churn_export.csv</td></tr>
+              <tr><td>Runs</td><td>1,000</td><td>default</td></tr>
+              <tr><td>Horizon</td><td>90 days</td><td>pricing_deck_q3.pdf</td></tr>
+              <tr><td>Confidence floor</td><td>0.70</td><td>default</td></tr>
+            </tbody></table>
+            <div class="pc-note">Every value is visible, sourced, and yours to override.</div>
+          </div>
+        </div>
+        <div class="pc-col">
+          <div class="pc-block">
+            <div class="pc-label">04 · Result · retention at £12, 90 days</div>
+            <div class="pc-result"><b>−4.1<small>pp</small></b><span>Median<br>Spread −9.2pp to −0.6pp</span></div>
+            <svg class="pc-dist" viewBox="0 0 560 172" role="img" aria-label="Distribution of retention change across runs: median minus 4.1 points, spread minus 9.2 to minus 0.6">
+<path d="M134.4 140 L134.4 108.3 L137.2 107.0 L140.0 105.6 L142.8 104.2 L145.6 102.7 L148.4 101.2 L151.2 99.7 L154.0 98.2 L156.8 96.6 L159.6 95.0 L162.4 93.3 L165.2 91.7 L168.0 90.0 L170.8 88.2 L173.6 86.5 L176.4 84.7 L179.2 82.9 L182.0 81.1 L184.8 79.3 L187.6 77.5 L190.4 75.6 L193.2 73.8 L196.0 71.9 L198.8 70.0 L201.6 68.2 L204.4 66.3 L207.2 64.4 L210.0 62.5 L212.8 60.7 L215.6 58.8 L218.4 57.0 L221.2 55.1 L224.0 53.3 L226.8 51.5 L229.6 49.7 L232.4 48.0 L235.2 46.3 L238.0 44.6 L240.8 43.0 L243.6 41.3 L246.4 39.8 L249.2 38.2 L252.0 36.8 L254.8 35.3 L257.6 33.9 L260.4 32.6 L263.2 31.3 L266.0 30.1 L268.8 28.9 L271.6 27.8 L274.4 26.8 L277.2 25.8 L280.0 25.0 L282.8 24.1 L285.6 23.4 L288.4 22.7 L291.2 22.1 L294.0 21.6 L296.8 21.1 L299.6 20.7 L302.4 20.4 L305.2 20.2 L308.0 20.1 L310.8 20.0 L313.6 20.0 L316.4 20.3 L319.2 20.7 L322.0 21.2 L324.8 21.9 L327.6 22.8 L330.4 23.9 L333.2 25.1 L336.0 26.5 L338.8 28.0 L341.6 29.7 L344.4 31.4 L347.2 33.4 L350.0 35.4 L352.8 37.5 L355.6 39.8 L358.4 42.1 L361.2 44.5 L364.0 47.0 L366.8 49.6 L369.6 52.2 L372.4 54.9 L375.2 57.6 L378.0 60.3 L380.8 63.1 L383.6 65.8 L386.4 68.6 L389.2 71.4 L392.0 74.1 L394.8 76.9 L397.6 79.6 L400.4 82.3 L403.2 84.9 L406.0 87.5 L408.8 90.0 L411.6 92.5 L414.4 95.0 L417.2 97.3 L420.0 99.6 L422.8 101.9 L425.6 104.0 L428.4 106.1 L431.2 108.1 L431.2 140 Z" fill="rgba(155,189,209,.22)"/>
+<path d="M0.0 138.1 L2.8 137.9 L5.6 137.7 L8.4 137.6 L11.2 137.4 L14.0 137.2 L16.8 137.0 L19.6 136.8 L22.4 136.6 L25.2 136.3 L28.0 136.0 L30.8 135.8 L33.6 135.5 L36.4 135.2 L39.2 134.9 L42.0 134.5 L44.8 134.1 L47.6 133.8 L50.4 133.4 L53.2 132.9 L56.0 132.5 L58.8 132.0 L61.6 131.5 L64.4 131.0 L67.2 130.5 L70.0 129.9 L72.8 129.3 L75.6 128.7 L78.4 128.1 L81.2 127.4 L84.0 126.7 L86.8 125.9 L89.6 125.2 L92.4 124.4 L95.2 123.5 L98.0 122.7 L100.8 121.8 L103.6 120.9 L106.4 119.9 L109.2 118.9 L112.0 117.9 L114.8 116.8 L117.6 115.7 L120.4 114.6 L123.2 113.4 L126.0 112.2 L128.8 110.9 L131.6 109.6 L134.4 108.3 L137.2 107.0 L140.0 105.6 L142.8 104.2 L145.6 102.7 L148.4 101.2 L151.2 99.7 L154.0 98.2 L156.8 96.6 L159.6 95.0 L162.4 93.3 L165.2 91.7 L168.0 90.0 L170.8 88.2 L173.6 86.5 L176.4 84.7 L179.2 82.9 L182.0 81.1 L184.8 79.3 L187.6 77.5 L190.4 75.6 L193.2 73.8 L196.0 71.9 L198.8 70.0 L201.6 68.2 L204.4 66.3 L207.2 64.4 L210.0 62.5 L212.8 60.7 L215.6 58.8 L218.4 57.0 L221.2 55.1 L224.0 53.3 L226.8 51.5 L229.6 49.7 L232.4 48.0 L235.2 46.3 L238.0 44.6 L240.8 43.0 L243.6 41.3 L246.4 39.8 L249.2 38.2 L252.0 36.8 L254.8 35.3 L257.6 33.9 L260.4 32.6 L263.2 31.3 L266.0 30.1 L268.8 28.9 L271.6 27.8 L274.4 26.8 L277.2 25.8 L280.0 25.0 L282.8 24.1 L285.6 23.4 L288.4 22.7 L291.2 22.1 L294.0 21.6 L296.8 21.1 L299.6 20.7 L302.4 20.4 L305.2 20.2 L308.0 20.1 L310.8 20.0 L313.6 20.0 L316.4 20.3 L319.2 20.7 L322.0 21.2 L324.8 21.9 L327.6 22.8 L330.4 23.9 L333.2 25.1 L336.0 26.5 L338.8 28.0 L341.6 29.7 L344.4 31.4 L347.2 33.4 L350.0 35.4 L352.8 37.5 L355.6 39.8 L358.4 42.1 L361.2 44.5 L364.0 47.0 L366.8 49.6 L369.6 52.2 L372.4 54.9 L375.2 57.6 L378.0 60.3 L380.8 63.1 L383.6 65.8 L386.4 68.6 L389.2 71.4 L392.0 74.1 L394.8 76.9 L397.6 79.6 L400.4 82.3 L403.2 84.9 L406.0 87.5 L408.8 90.0 L411.6 92.5 L414.4 95.0 L417.2 97.3 L420.0 99.6 L422.8 101.9 L425.6 104.0 L428.4 106.1 L431.2 108.1 L434.0 110.1 L436.8 111.9 L439.6 113.7 L442.4 115.4 L445.2 117.1 L448.0 118.6 L450.8 120.1 L453.6 121.5 L456.4 122.8 L459.2 124.1 L462.0 125.3 L464.8 126.4 L467.6 127.4 L470.4 128.4 L473.2 129.3 L476.0 130.2 L478.8 131.0 L481.6 131.8 L484.4 132.5 L487.2 133.1 L490.0 133.7 L492.8 134.3 L495.6 134.8 L498.4 135.3 L501.2 135.7 L504.0 136.1 L506.8 136.5 L509.6 136.8 L512.4 137.1 L515.2 137.4 L518.0 137.7 L520.8 137.9 L523.6 138.1 L526.4 138.3 L529.2 138.5 L532.0 138.7 L534.8 138.8 L537.6 138.9 L540.4 139.1 L543.2 139.2 L546.0 139.3 L548.8 139.3 L551.6 139.4 L554.4 139.5 L557.2 139.6 L560.0 139.6" fill="none" stroke="#9bbdd1" stroke-width="1.6"/>
+<line x1="311.5" x2="311.5" y1="14" y2="140" stroke="#eee5d4" stroke-dasharray="3 4" stroke-width="1"/>
+<line x1="455.0" x2="455.0" y1="14" y2="140" stroke="rgba(238,229,212,.25)" stroke-width="1"/>
+<line x1="0" x2="560" y1="140" y2="140" stroke="rgba(238,229,212,.3)"/>
+<text x="317.5" y="24">MEDIAN −4.1PP</text>
+<text x="133.0" y="160" text-anchor="middle">−9.2</text>
+<text x="434.0" y="160" text-anchor="middle">−0.6</text>
+<text x="459.0" y="160">0</text>
+</svg>
+            <div class="pc-conf">Confidence: <b>moderate-high</b></div>
+            <div class="pc-segs"><div><span>Segment · lapsed returners</span><b class="neg">−14pp</b></div><div><span>Segment · under-25</span><b class="pos">+6pp</b></div></div>
+          </div>
+          <div class="pc-block">
+            <div class="pc-label">05 · Follow-up · re-running · 400 runs</div>
+            <p class="pc-q">If we take the aggressive option, how does it land with the under-25 cohort specifically?</p>
+            <p class="pc-a">Under-25s absorb £12 with a median of +2.4pp retention, spread +0.1pp to +4.6pp. The cohort moves with its peers rather than on price.</p>
+            <div class="pc-note">Confidence: high (0.86) · holds unless peer churn exceeds 8%</div>
+          </div>
+        </div>
+      </div>
+      <div class="pc-foot">Round trip on a follow-up: hours. The population stays live between questions.</div>
+    </figure>
   </div>
 </section>
 <section class="p-stats">
@@ -100,7 +154,7 @@
     <span class="kicker">See it working</span>
     <h2>Book a Polysoma demo.</h2>
     <p>Thirty minutes, on a problem from your own business rather than a scripted tour.</p>
-    <div class="p-actions"><a class="p-btn solid" href="../../contact/#enquiry">Book a demo ↗</a></div>
+    <div class="p-actions"><a class="p-btn solid" href="../../contact/#enquiry">Book a demo →</a></div>
   </div>
 </section>
 </main>

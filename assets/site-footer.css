@@ -59,3 +59,29 @@
   .site-footer-meta { text-align: left; }
   .site-footer-bottom { flex-direction: column; gap: 6px; }
 }
+
+/* Same footer width on every page, whatever the page's own .container is */
+.site-footer .container {
+  width: min(1440px, calc(100% - 72px));
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 700px) {
+  .site-footer .container { width: calc(100% - 34px); }
+}
+
+/* Guard against page stylesheets that style bare nav/footer elements (home.css) */
+footer.site-footer {
+  padding: 48px 0 24px;
+  background: #eee5d4;
+  border-top: 1px solid rgba(23,35,31,.22);
+}
+.site-footer nav.site-footer-nav {
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 0;
+  position: static;
+  z-index: auto;
+}
