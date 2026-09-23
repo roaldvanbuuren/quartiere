@@ -294,3 +294,15 @@ a {
   }
 
 }
+
+/* Mobile: tighter hero */
+@media(max-width:700px) {
+  .page-hero-copy {
+    padding:130px 0 50px
+  }
+
+  .page-hero h1 {
+    font-size:62px
+  }
+
+}

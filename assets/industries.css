@@ -24,3 +24,4 @@
   .industry-card .card-content,.industry-card:nth-child(odd) .card-content{grid-column:1;grid-row:3;max-width:none;padding:20px 28px 42px}
   .industry-card .card-tags{right:16px;bottom:16px;left:16px}
 }
+@media(max-width:700px){.industry-hero{aspect-ratio:auto;min-height:620px}.industry-hero-content{padding:130px 0 50px;justify-content:flex-end}.industry-hero h1{font-size:60px}}

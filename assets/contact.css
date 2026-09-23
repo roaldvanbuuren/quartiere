@@ -126,3 +126,45 @@ a {
   }
 
 }
+
+
+/* Enquiry form */
+.enquiry{padding:120px 0;border-bottom:1px solid var(--line)}
+.enquiry-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+.enquiry-intro h2{font:400 clamp(52px,6vw,88px)/.88 'Instrument Serif';letter-spacing:-.05em;margin:20px 0 28px}
+.enquiry-intro p{font-size:16px;line-height:1.8;color:var(--muted);max-width:480px}
+.enquiry-next{list-style:none;padding:0;margin:40px 0 0;border-top:1px solid var(--line);max-width:480px}
+.enquiry-next li{display:grid;grid-template-columns:44px 1fr;padding:15px 0;border-bottom:1px solid var(--line);font-size:14px}
+.enquiry-next span{font:10px 'DM Mono';color:var(--blue);padding-top:3px}
+.enquiry-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.enquiry-form label{display:grid;gap:8px;font:10px 'DM Mono';letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.enquiry-form .wide{grid-column:1/-1}
+.enquiry-form input,.enquiry-form select,.enquiry-form textarea{border:1px solid var(--line);background:rgba(255,255,255,.25);padding:14px;font:14px Manrope,Arial,sans-serif;color:var(--ink);text-transform:none;letter-spacing:0;border-radius:0}
+.enquiry-form textarea{height:150px;resize:vertical}
+.enquiry-form .check{display:flex;align-items:center;gap:10px}
+.enquiry-form .check input{width:16px;height:16px;padding:0}
+.enquiry-form button{background:var(--ink);color:var(--paper);border:0;padding:16px;font:10px 'DM Mono';letter-spacing:.15em;text-transform:uppercase;cursor:pointer}
+.enquiry-form button:hover{background:var(--olive)}
+.enquiry-done{font:400 38px/1 'Instrument Serif';grid-column:1/-1}
+@media(max-width:900px){.enquiry-grid{grid-template-columns:1fr;gap:50px}.enquiry{padding:80px 0}}
+@media(max-width:600px){.enquiry-form{grid-template-columns:1fr}}
+
+.contact-page-hero-content {
+  padding-top:130px
+}
+
+.contact-page-hero a.cta {
+  align-self:flex-start
+}
+
+.contact-page-hero h1 {
+  font-size:clamp(64px,8vw,124px)
+}
+
+@media(max-width:650px) {
+  .contact-page-hero {
+    aspect-ratio:auto;
+    min-height:600px
+  }
+
+}

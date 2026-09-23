@@ -658,3 +658,26 @@ a {
   }
 
 }
+
+/* Longer headline: keep clear of the nav */
+.company-hero-scenic h1 {
+  font-size:clamp(60px,7vw,112px);
+  max-width:880px;
+  margin:18px 0 30px
+}
+
+.company-hero-content {
+  padding-top:130px
+}
+
+@media(max-width:650px) {
+  .company-hero-scenic {
+    aspect-ratio:auto;
+    min-height:620px
+  }
+
+  .company-hero-scenic h1 {
+    font-size:54px
+  }
+
+}

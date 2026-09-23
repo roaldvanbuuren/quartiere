@@ -1,0 +1,491 @@
+/* Shared styles for Q4 Labs product pages, Trust and Insights.
+   Loaded after q4-labs.css, which supplies tokens, .container, .section, .section-head, .kicker, .dark-band. */
+
+.p-hero {
+  position:relative;
+  background:var(--ink);
+  color:var(--paper);
+  padding:210px 0 110px;
+  overflow:hidden
+}
+
+.p-hero:after {
+  content:'';
+  position:absolute;
+  right:6vw;
+  top:150px;
+  width:min(420px,38vw);
+  height:min(420px,38vw);
+  opacity:.5;
+  background-image:radial-gradient(circle,rgba(238,229,212,.55) 0 1.5px,transparent 2px);
+  background-size:18px 18px;
+  -webkit-mask-image:radial-gradient(circle,#000 30%,transparent 70%);
+  mask-image:radial-gradient(circle,#000 30%,transparent 70%)
+}
+
+.p-hero.p-pattern-polysoma:after {
+  background-image:radial-gradient(circle,rgba(155,189,209,.8) 0 1.5px,transparent 2px),repeating-linear-gradient(45deg,transparent 0 17px,rgba(155,189,209,.28) 17px 18px),repeating-linear-gradient(-45deg,transparent 0 17px,rgba(155,189,209,.28) 17px 18px);
+  background-size:18px 18px,36px 36px,36px 36px
+}
+
+.p-hero.p-pattern-altiera:after {
+  background-image:repeating-conic-gradient(from 45deg,rgba(238,229,212,.3) 0 25%,transparent 0 50%);
+  background-size:22px 22px
+}
+
+.p-hero.p-pattern-lumen:after {
+  background-image:repeating-radial-gradient(circle at 50% 50%,transparent 0 12px,rgba(238,229,212,.35) 13px 14px,transparent 15px 26px);
+  background-size:auto
+}
+
+.p-hero .container {
+  position:relative;
+  z-index:2
+}
+
+.p-crumb {
+  font:10px 'DM Mono';
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:rgba(238,229,212,.6)
+}
+
+.p-crumb a {
+  border-bottom:1px solid rgba(238,229,212,.35)
+}
+
+.p-hero h1 {
+  font:400 clamp(90px,13vw,200px)/.8 'Instrument Serif';
+  letter-spacing:-.07em;
+  margin:34px 0 26px
+}
+
+.p-hero .p-promise {
+  font:400 clamp(34px,3.6vw,56px)/1 'Instrument Serif';
+  letter-spacing:-.03em;
+  margin:0 0 28px;
+  max-width:760px
+}
+
+.p-hero .p-lede {
+  font-size:17px;
+  line-height:1.75;
+  color:rgba(238,229,212,.78);
+  max-width:620px;
+  margin:0
+}
+
+.p-type {
+  display:inline-flex;
+  align-items:center;
+  min-height:34px;
+  padding:0 13px;
+  margin-top:34px;
+  border:1px solid rgba(238,229,212,.3);
+  font:10px 'DM Mono';
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:rgba(238,229,212,.85)
+}
+
+.p-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:38px
+}
+
+.p-btn {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 20px;
+  font:10px 'DM Mono';
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  border:1px solid rgba(238,229,212,.6);
+  color:var(--paper)
+}
+
+.p-btn.solid {
+  background:var(--blue);
+  border-color:var(--blue);
+  color:#fff
+}
+
+.p-btn:hover {
+  opacity:.8
+}
+
+/* Screenshot placeholder */
+.p-shot {
+  margin-top:0;
+  aspect-ratio:16 / 9;
+  border:1px solid var(--line);
+  background-color:#e7ddca;
+  background-image:radial-gradient(circle,rgba(53,69,54,.22) 1px,transparent 1.5px);
+  background-size:14px 14px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  text-align:center;
+  padding:24px
+}
+
+.p-shot b {
+  font:400 clamp(30px,3vw,46px)/1 'Instrument Serif';
+  color:var(--ink)
+}
+
+.p-shot span {
+  font:10px 'DM Mono';
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#777066
+}
+
+/* Numbered steps */
+.p-steps {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line)
+}
+
+.p-step {
+  padding:30px 28px 40px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  min-height:280px;
+  background:var(--paper)
+}
+
+.p-step:nth-child(even) {
+  background:#e7ddca
+}
+
+.p-step span {
+  font:10px 'DM Mono';
+  letter-spacing:.14em;
+  color:var(--blue)
+}
+
+.p-step h3 {
+  font:400 40px/.95 'Instrument Serif';
+  letter-spacing:-.03em;
+  margin:60px 0 16px
+}
+
+.p-step p {
+  font-size:14px;
+  line-height:1.75;
+  color:#4f4d45;
+  margin:0
+}
+
+/* Use cases */
+.p-uses {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:0;
+  border-top:1px solid var(--line)
+}
+
+.p-use {
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:30px;
+  padding:28px 0;
+  border-bottom:1px solid var(--line)
+}
+
+.p-use:nth-child(odd) {
+  padding-right:40px
+}
+
+.p-use:nth-child(even) {
+  padding-left:40px;
+  border-left:1px solid var(--line)
+}
+
+.p-use a {
+  font:10px 'DM Mono';
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--blue);
+  padding-top:4px
+}
+
+.p-use p {
+  margin:0;
+  font-size:15px;
+  line-height:1.75;
+  color:#4f4d45
+}
+
+/* Spec table */
+.p-specs {
+  border-top:1px solid var(--line)
+}
+
+.p-spec {
+  display:grid;
+  grid-template-columns:.6fr 1.4fr;
+  gap:70px;
+  padding:26px 0;
+  border-bottom:1px solid var(--line)
+}
+
+.p-spec dt {
+  font:10px 'DM Mono';
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#777066;
+  padding-top:4px
+}
+
+.p-spec dd {
+  margin:0;
+  font-size:16px;
+  line-height:1.75;
+  color:var(--ink);
+  max-width:720px
+}
+
+.section.alt {
+  background:#e7ddca
+}
+
+/* Method strip */
+.p-method {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:rgba(238,229,212,.18);
+  border:1px solid rgba(238,229,212,.18);
+  margin-top:10px
+}
+
+.p-method div {
+  background:var(--ink);
+  padding:26px;
+  min-height:190px
+}
+
+.p-method span {
+  font:10px 'DM Mono';
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(238,229,212,.55)
+}
+
+.p-method b {
+  display:block;
+  font:400 34px/1 'Instrument Serif';
+  margin:40px 0 12px
+}
+
+.p-method p {
+  margin:0;
+  font-size:14px;
+  line-height:1.7;
+  color:rgba(238,229,212,.7)
+}
+
+.p-method div.on {
+  background:#20332c
+}
+
+.p-method div.on span {
+  color:#9bbdd1
+}
+
+/* Other systems */
+.p-others {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line)
+}
+
+.p-others a {
+  display:block;
+  padding:28px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  min-height:190px
+}
+
+.p-others a:hover {
+  background:#e7ddca
+}
+
+.p-others span {
+  font:10px 'DM Mono';
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#777066
+}
+
+.p-others b {
+  display:block;
+  font:400 44px/1 'Instrument Serif';
+  margin:44px 0 10px
+}
+
+.p-others p {
+  margin:0;
+  font-size:14px;
+  color:#4f4d45;
+  line-height:1.6
+}
+
+/* CTA */
+.p-cta {
+  background:var(--ink);
+  color:var(--paper);
+  padding:130px 0
+}
+
+.p-cta h2 {
+  font:400 clamp(64px,9vw,136px)/.8 'Instrument Serif';
+  letter-spacing:-.06em;
+  margin:22px 0 36px;
+  max-width:1000px
+}
+
+.p-cta p {
+  color:rgba(238,229,212,.7);
+  max-width:520px;
+  line-height:1.75
+}
+
+/* Labs overview card links */
+.lab .lab-link {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-top:26px;
+  font:10px 'DM Mono';
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  border-bottom:1px solid currentColor;
+  padding-bottom:6px;
+  align-self:flex-start
+}
+
+.lab {
+  transition:background .2s ease
+}
+
+.lab:hover {
+  background:#e2d5bf !important
+}
+
+/* Insights */
+.i-list {
+  border-top:1px solid var(--line)
+}
+
+.i-item {
+  display:grid;
+  grid-template-columns:120px 1fr 200px;
+  gap:40px;
+  padding:38px 0;
+  border-bottom:1px solid var(--line);
+  align-items:start
+}
+
+.i-item .i-num {
+  font:10px 'DM Mono';
+  letter-spacing:.14em;
+  color:var(--blue);
+  padding-top:10px
+}
+
+.i-item h3 {
+  font:400 clamp(34px,3.6vw,54px)/.98 'Instrument Serif';
+  letter-spacing:-.03em;
+  margin:0 0 14px
+}
+
+.i-item p {
+  margin:0;
+  font-size:15px;
+  line-height:1.75;
+  color:#4f4d45;
+  max-width:720px
+}
+
+.i-item .i-meta {
+  font:10px 'DM Mono';
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#777066;
+  text-align:right;
+  padding-top:10px
+}
+
+.i-item .i-meta em {
+  display:inline-block;
+  font-style:normal;
+  margin-top:10px;
+  padding:6px 9px;
+  border:1px solid var(--line)
+}
+
+@media(max-width:1000px) {
+  .p-steps,.p-method {
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .p-uses {
+    grid-template-columns:1fr
+  }
+
+  .p-use:nth-child(odd),.p-use:nth-child(even) {
+    padding-left:0;
+    padding-right:0;
+    border-left:0
+  }
+
+  .p-others {
+    grid-template-columns:1fr
+  }
+
+}
+
+@media(max-width:700px) {
+  .p-hero {
+    padding:160px 0 80px
+  }
+
+  .p-hero h1 {
+    font-size:88px
+  }
+
+  .p-steps,.p-method {
+    grid-template-columns:1fr
+  }
+
+  .p-use,.p-spec {
+    grid-template-columns:1fr;
+    gap:10px
+  }
+
+  .i-item {
+    grid-template-columns:1fr;
+    gap:12px
+  }
+
+  .i-item .i-meta {
+    text-align:left
+  }
+
+}
+
+.dark-band a,.p-spec dd a {
+  border-bottom:1px solid currentColor
+}

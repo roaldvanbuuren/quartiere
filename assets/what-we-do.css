@@ -636,3 +636,40 @@ a {
   }
 
 }
+
+/* Q4 Method deliverable line */
+.cap p.get {
+  margin-top:26px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  font-size:14px;
+  color:var(--ink)
+}
+
+.cap p.get b {
+  display:block;
+  font:400 10px 'DM Mono';
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#777066;
+  margin-bottom:6px
+}
+
+/* Mobile: stack hero copy below the image so nothing clips */
+@media(max-width:700px) {
+  .page-hero-copy {
+    position:relative;
+    width:100%;
+    padding:120px 18px 50px;
+    background:#17231f
+  }
+
+  .page-hero-media {
+    aspect-ratio:16 / 10
+  }
+
+  .page-hero h1 {
+    font-size:62px
+  }
+
+}

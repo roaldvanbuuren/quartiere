@@ -105,3 +105,10 @@
   .hero.q-hero-preserved .hero-copy p { max-width: 430px; font-size: 14px; }
   .hero.q-hero-preserved .hero-art img { object-position: 62% center; }
 }
+
+/* Mobile: let the hero grow with its copy instead of clipping it */
+@media (max-width: 700px) {
+  .hero.q-hero-preserved { aspect-ratio: auto; min-height: 680px; }
+  .hero.q-hero-preserved .hero-copy { padding: 130px 0 60px; justify-content: flex-end; width: calc(100% - 36px); }
+  .hero.q-hero-preserved .hero-art::after { background: linear-gradient(0deg, rgba(18,29,25,.9) 0%, rgba(18,29,25,.55) 55%, rgba(18,29,25,.25) 100%); }
+}
