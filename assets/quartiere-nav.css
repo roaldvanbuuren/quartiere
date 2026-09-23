@@ -109,3 +109,54 @@
   .site-nav .nav-dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;background:transparent;border:0;box-shadow:none;padding:4px 0 8px 14px;min-width:0}
   .site-nav .nav-dropdown-menu a{color:rgba(246,239,226,.72) !important;padding:9px 0;font-size:10px;white-space:normal}
 }
+
+/* One CTA button style across the site (dark backgrounds) */
+.q-fit-hero-copy .q-fit-cta,
+.q-contact-action button,
+section.contact a,
+.industry-cta .cta-button,
+.p-btn,
+.p-btn.solid,
+.contact-page-hero a.cta{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  padding:14px 20px !important;
+  border:1px solid rgba(238,229,212,.6) !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#eee5d4 !important;
+  font:400 10px/1 "DM Mono",monospace !important;
+  letter-spacing:.14em !important;
+  text-transform:uppercase !important;
+  text-decoration:none !important;
+  cursor:pointer;
+  transition:background .2s ease,color .2s ease,border-color .2s ease !important;
+}
+.q-fit-hero-copy .q-fit-cta:hover,
+.q-contact-action button:hover,
+section.contact a:hover,
+.industry-cta .cta-button:hover,
+.p-btn:hover,
+.contact-page-hero a.cta:hover{
+  background:#eee5d4 !important;
+  color:#17231f !important;
+  border-color:#eee5d4 !important;
+  opacity:1 !important;
+}
+.industry-cta .cta-button span{font-size:inherit !important;color:inherit !important}
+
+/* Form submit buttons: same type and spacing, solid fill */
+.form button,
+.enquiry-form button{
+  padding:16px 20px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:#17231f !important;
+  color:#eee5d4 !important;
+  font:400 10px/1 "DM Mono",monospace !important;
+  letter-spacing:.14em !important;
+  text-transform:uppercase !important;
+  cursor:pointer;
+}
+.form button:hover,.enquiry-form button:hover{background:#354536 !important}

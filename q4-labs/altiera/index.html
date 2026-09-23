@@ -32,7 +32,67 @@
       <div><span class="kicker">01 / The problem</span></div>
       <div><h2>Your most valuable data is the data you can’t send anywhere.</h2><p>Drawings, process parameters, customer contracts, programme documents. For many European businesses, sending this to a public AI service is not an option, for legal, contractual or competitive reasons.</p><p>So the most valuable use cases never get started. Altiera brings the model to the data instead.</p></div>
     </div>
-<div class="p-shot" role="img" aria-label="Altiera product screenshot placeholder"><b>Altiera</b><span>Product screenshot · coming soon</span></div>
+<figure class="at" aria-label="Altiera deployed inside your own environment">
+      <div class="at-head">
+        <div>
+          <span class="at-kicker">Deployment</span>
+          <p class="at-title">The model comes to your data.</p>
+          <p class="at-sub">Choose where Altiera runs. Everything it reads, and everything it answers, stays inside that boundary.</p>
+        </div>
+        <div class="at-tabs" role="tablist" aria-label="Where Altiera runs">
+          <button role="tab" aria-selected="true" data-at="onprem" data-where="Your servers · on-premise" data-region="Your building">On-premise</button>
+          <button role="tab" aria-selected="false" data-at="private" data-where="Your private cloud" data-region="Your cloud tenant">Private cloud</button>
+          <button role="tab" aria-selected="false" data-at="eu" data-where="European data centre" data-region="EU region">EU data centre</button>
+        </div>
+      </div>
+
+      <div class="at-body">
+        <div class="at-env">
+          <div class="at-env-label"><span class="at-dot"></span><b class="at-where">Your servers · on-premise</b><span>Your environment</span></div>
+          <div class="at-row">
+            <div class="at-col">
+              <span class="at-col-label">Your data</span>
+              <span class="at-chip">Drawings &amp; CAD files</span>
+              <span class="at-chip">Process parameters</span>
+              <span class="at-chip">Contracts</span>
+              <span class="at-chip">Support history</span>
+            </div>
+            <div class="at-flow" aria-hidden="true"><i></i><i></i></div>
+            <div class="at-core">
+              <span class="at-core-label">Altiera</span>
+              <b>Private language model</b>
+              <span class="at-core-meta">Open-source foundation · trained further on Quartiere datasets</span>
+            </div>
+            <div class="at-flow" aria-hidden="true"><i></i><i></i></div>
+            <div class="at-col">
+              <span class="at-col-label">Used by</span>
+              <span class="at-chip">Vigil</span>
+              <span class="at-chip">Polysoma</span>
+              <span class="at-chip">Your own tools · standard API</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="at-side">
+          <div class="at-log">
+            <span class="at-col-label">Request log</span>
+            <div class="at-log-row"><span>Request</span><b>Vigil · support question</b></div>
+            <div class="at-log-row"><span>Processed in</span><b class="at-region">Your building</b></div>
+            <div class="at-log-row"><span>Access</span><b>Support team only</b></div>
+            <div class="at-log-row"><span>Logged</span><b>Yes · your retention policy</b></div>
+            <div class="at-log-row at-ok"><span>Left your environment</span><b>No</b></div>
+            <div class="at-log-row at-ok"><span>Used to train a model for anyone else</span><b>Never</b></div>
+          </div>
+          <div class="at-out">
+            <span class="at-col-label">Outside the boundary</span>
+            <p><s>Public AI services</s></p>
+            <p><s>Other clients’ models</s></p>
+          </div>
+        </div>
+      </div>
+      <figcaption class="at-foot">Illustrative example · you decide who uses it, what it can access and what gets logged</figcaption>
+    </figure>
+    <script>(function(){var f=document.querySelector('.at');if(!f)return;var t=f.querySelectorAll('[data-at]');t.forEach(function(b){b.addEventListener('click',function(){t.forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});f.querySelector('.at-where').textContent=b.getAttribute('data-where');f.querySelector('.at-region').textContent=b.getAttribute('data-region')})})})();</script>
   </div>
 </section>
 <section class="section alt" id="how">
