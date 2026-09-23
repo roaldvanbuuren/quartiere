@@ -250,7 +250,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 45px}.foot{display:flex;j
 /* Requested spacing fixes only */
 .service-focus + .capabilities {
   margin-top: 0 !important;
-  padding-top: 0 !important;
+  padding-top: 130px !important;
+}
+@media (max-width: 700px) {
+  .service-focus + .capabilities { padding-top: 80px !important; }
 }
 .service-focus .service-photo {
   margin-bottom: 0 !important;

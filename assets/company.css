@@ -681,3 +681,12 @@ a {
   }
 
 }
+
+/* 05 / Why Quartiere */
+.why{padding:0 0 140px}
+.why-art{margin:0 0 70px}
+.why-art img{display:block;width:100%;aspect-ratio:2/1;object-fit:cover;filter:saturate(.85)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.why-grid h2{font:400 clamp(58px,6.5vw,100px)/.86 'Instrument Serif';letter-spacing:-.05em;margin:18px 0 0}
+.why-copy p{font-size:16px;line-height:1.8;color:#4f4d45;max-width:570px;margin:0 0 20px}
+@media(max-width:900px){.why{padding:0 0 90px}.why-art{margin:0 0 40px}.why-grid{grid-template-columns:1fr;gap:24px}}
