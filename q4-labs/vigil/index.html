@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>QUARTIERE | Vigil · Company brain</title>
-<meta name="description" content="Vigil connects documents, tickets, conversations and systems, so anyone can ask a question and get an answer grounded in what the company already knows, with the source attached.">
+<meta name="description" content="Vigil connects documents, tickets, conversations and systems, and lives in the tool your team already uses: Slack, Microsoft Teams or email. Anyone can ask a question there and get an answer grounded in what the company already knows, with the source attached.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
     <div class="p-crumb"><a href="../">Q4 Labs</a> / 01</div>
     <h1>Vigil</h1>
     <p class="p-promise">Give the organisation a memory.</p>
-    <p class="p-lede">Vigil connects documents, tickets, conversations and systems, so anyone can ask a question and get an answer grounded in what the company already knows, with the source attached.</p>
+    <p class="p-lede">Vigil connects documents, tickets, conversations and systems, and lives in the tool your team already uses: Slack, Microsoft Teams or email. Anyone can ask a question there and get an answer grounded in what the company already knows, with the source attached.</p>
     <span class="p-type">Company brain</span>
     <div class="p-actions"><a class="p-btn solid" href="../../contact/#enquiry">Book a demo →</a><a class="p-btn" href="#how">How it works ↓</a></div>
   </div>
@@ -32,7 +32,55 @@
       <div><span class="kicker">01 / The problem</span></div>
       <div><h2>The answer exists. Nobody can find it.</h2><p>Every company has a few people everyone goes to with questions. When they are busy, on holiday or gone, work slows down or gets repeated.</p><p>The knowledge is there, spread across drives, wikis, tickets and inboxes, in several languages and years of versions. Vigil makes it usable.</p></div>
     </div>
-<div class="p-shot" role="img" aria-label="Vigil product screenshot placeholder"><b>Vigil</b><span>Product screenshot · coming soon</span></div>
+<figure class="vg" aria-label="Vigil answering the same question in Slack, Microsoft Teams and email">
+      <div class="vg-head">
+        <div>
+          <span class="vg-kicker">One place to ask</span>
+          <p class="vg-title">Vigil lives where your team already works.</p>
+          <p class="vg-sub">Slack, Microsoft Teams or email: whichever tool is the centre of your day, that is where Vigil answers. It reaches into every system behind it, so nobody has to know where the answer is stored.</p>
+        </div>
+        <div class="vg-tabs" role="tablist" aria-label="Where you ask Vigil">
+          <button role="tab" aria-selected="true" data-vg="slack">Slack</button>
+          <button role="tab" aria-selected="false" data-vg="teams">Teams</button>
+          <button role="tab" aria-selected="false" data-vg="email">Email</button>
+        </div>
+      </div>
+
+      <div class="vg-stage">
+        <div class="vg-sources" aria-hidden="true">
+          <span class="vg-src-label">Connected sources</span>
+          <span>Support tickets</span><span>Wiki</span><span>Shared drive</span><span>CRM</span><span>Product docs</span><span>Email archive</span>
+        </div>
+
+        <div class="vg-panel is-on" data-vg-panel="slack" role="tabpanel">
+          <div class="vg-bar"><b># support-eu</b><span>Thread</span></div>
+          <div class="vg-msg"><i class="vg-av">MR</i><div><b>Marta R.</b><small>09:41</small><p><span class="vg-at">@Vigil</span> has anyone fixed the nesting crash on v12.3 for a customer before?</p></div></div>
+          <div class="vg-msg vg-bot"><i class="vg-av vg-av-bot">V</i><div><b>Vigil</b><small>09:41 · App</small>
+            <p>Yes, twice. Both crashes came from sheet templates imported from v11 with an empty material field. Re-saving the template in v12.3 with a material assigned fixed it both times.</p>
+            <div class="vg-cite"><span>Ticket #4812 · March 2025</span><span>Wiki › Nesting › Known issues</span><span>Thread in #support-eu · Luca B.</span></div></div></div>
+        </div>
+
+        <div class="vg-panel" data-vg-panel="teams" role="tabpanel" hidden>
+          <div class="vg-bar"><b>Chat with Vigil</b><span>Microsoft Teams</span></div>
+          <div class="vg-msg"><i class="vg-av">MR</i><div><b>Marta R.</b><small>09:41</small><p>Has anyone fixed the nesting crash on v12.3 for a customer before?</p></div></div>
+          <div class="vg-msg vg-bot"><i class="vg-av vg-av-bot">V</i><div><b>Vigil</b><small>09:41</small>
+            <p>Yes, twice. Both crashes came from sheet templates imported from v11 with an empty material field. Re-saving the template in v12.3 with a material assigned fixed it both times.</p>
+            <div class="vg-cite"><span>Ticket #4812 · March 2025</span><span>Wiki › Nesting › Known issues</span><span>Thread in #support-eu · Luca B.</span></div></div></div>
+        </div>
+
+        <div class="vg-panel" data-vg-panel="email" role="tabpanel" hidden>
+          <div class="vg-bar"><b>Re: Nesting crash on v12.3</b><span>vigil@yourcompany.com</span></div>
+          <div class="vg-mail">
+            <p class="vg-mail-meta"><b>From:</b> Vigil &lt;vigil@yourcompany.com&gt;<br><b>To:</b> Marta R.</p>
+            <p>Hi Marta,</p>
+            <p>Yes, twice. Both crashes came from sheet templates imported from v11 with an empty material field. Re-saving the template in v12.3 with a material assigned fixed it both times.</p>
+            <div class="vg-cite"><span>Ticket #4812 · March 2025</span><span>Wiki › Nesting › Known issues</span><span>Thread in #support-eu · Luca B.</span></div>
+          </div>
+        </div>
+      </div>
+      <figcaption class="vg-foot">Illustrative example · same question, same sources, three places to ask</figcaption>
+    </figure>
+    <script>(function(){var f=document.querySelector('.vg');if(!f)return;var t=f.querySelectorAll('[data-vg]');t.forEach(function(b){b.addEventListener('click',function(){t.forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});f.querySelectorAll('[data-vg-panel]').forEach(function(p){var on=p.getAttribute('data-vg-panel')===b.getAttribute('data-vg');p.hidden=!on;p.classList.toggle('is-on',on)})})})})();</script>
   </div>
 </section>
 <section class="section alt" id="how">
@@ -41,7 +89,7 @@
       <div><span class="kicker">02 / How it works</span></div>
       <div><h2>Four steps.</h2></div>
     </div>
-    <div class="p-steps"><article class="p-step"><span>01</span><h3>Connect</h3><p>Vigil links to the places your knowledge already lives, with the same access rights people have today.</p></article><article class="p-step"><span>02</span><h3>Organise</h3><p>It reads documents, tickets and conversations and turns them into one searchable picture of what the company knows.</p></article><article class="p-step"><span>03</span><h3>Answer</h3><p>People ask in plain language and get an answer with its sources attached, so they can check it.</p></article><article class="p-step"><span>04</span><h3>Learn</h3><p>Corrections and new answers flow back in, so the next person gets a better answer.</p></article></div>
+    <div class="p-steps"><article class="p-step"><span>01</span><h3>Connect</h3><p>Vigil links to the places your knowledge already lives, with the same access rights people have today.</p></article><article class="p-step"><span>02</span><h3>Organise</h3><p>It reads documents, tickets and conversations and turns them into one searchable picture of what the company knows.</p></article><article class="p-step"><span>03</span><h3>Answer</h3><p>People ask in Slack, Teams or email, in plain language, and get an answer with its sources attached, so they can check it.</p></article><article class="p-step"><span>04</span><h3>Learn</h3><p>Corrections and new answers flow back in, so the next person gets a better answer.</p></article></div>
   </div>
 </section>
 <section class="section">
@@ -59,7 +107,7 @@
       <div><span class="kicker">04 / Deployment &amp; data</span></div>
       <div><h2>The details.</h2></div>
     </div>
-    <dl class="p-specs"><div class="p-spec"><dt>Typical sources</dt><dd>Shared drives, wikis, ticketing and support systems, CRM, product documentation and email archives.</dd></div><div class="p-spec"><dt>Access</dt><dd>Respects the permissions you already have: people only get answers from sources they can already open.</dd></div><div class="p-spec"><dt>Answers</dt><dd>Every answer shows where it came from, so people can verify it and trust it.</dd></div><div class="p-spec"><dt>Hosting</dt><dd>Runs in a European cloud or on your own servers, and can run on <a href="../altiera/">Altiera</a> so no data leaves your environment.</dd></div></dl>
+    <dl class="p-specs"><div class="p-spec"><dt>Where it lives</dt><dd>Inside the tool your team already uses every day: Slack, Microsoft Teams or email. One place to ask, whichever system the answer is stored in. No new app to open.</dd></div><div class="p-spec"><dt>Typical sources</dt><dd>Shared drives, wikis, ticketing and support systems, CRM, product documentation and email archives.</dd></div><div class="p-spec"><dt>Access</dt><dd>Respects the permissions you already have: people only get answers from sources they can already open.</dd></div><div class="p-spec"><dt>Answers</dt><dd>Every answer shows where it came from, so people can verify it and trust it.</dd></div><div class="p-spec"><dt>Hosting</dt><dd>Runs in a European cloud or on your own servers, and can run on <a href="../altiera/">Altiera</a> so no data leaves your environment.</dd></div></dl>
   </div>
 </section>
 <section class="dark-band">
