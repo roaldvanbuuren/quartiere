@@ -5,16 +5,54 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex">
   <title>Quartiere · Insights editor</title>
-  <link href="config.yml" type="text/yaml" rel="cms-config-url">
 </head>
 <body>
   <script>window.CMS_MANUAL_INIT = true;</script>
   <script src="https://unpkg.com/decap-cms@^3.3.3/dist/decap-cms.js"></script>
   <script>
-    // Logs in through this site's own /api/auth (GitHub OAuth), whatever domain it is served from.
-    CMS.init({ config: { backend: { name: "github", repo: "ELOCollective/quartiere-vercel", branch: "main", base_url: window.location.origin, auth_endpoint: "api/auth" } } });
-    CMS.registerPreviewStyle("../assets/q4-labs.css");
-    CMS.registerPreviewStyle("../assets/product.css");
+    // The whole editor config lives here (no config.yml fetch), so it works on /admin and /admin/ alike.
+    // Saving a post commits a Markdown file to content/insights/ on GitHub; Vercel rebuilds and it is live in about a minute.
+    CMS.init({
+      config: {
+        load_config_file: false,
+        backend: {
+          name: "github",
+          repo: "ELOCollective/quartiere-vercel",
+          branch: "main",
+          base_url: window.location.origin,
+          auth_endpoint: "api/auth"
+        },
+        site_url: window.location.origin,
+        display_url: window.location.origin + "/insights/",
+        media_folder: "assets/insights",
+        public_folder: "/assets/insights",
+        collections: [{
+          name: "insights",
+          label: "Insights",
+          label_singular: "Post",
+          description: "Articles for /insights. Tip: a line starting with ###### becomes a small blue section label, and a > quote becomes a large callout.",
+          folder: "content/insights",
+          create: true,
+          slug: "{{slug}}",
+          sortable_fields: ["date", "title"],
+          summary: "{{title}} · {{date}}",
+          fields: [
+            { label: "Title", name: "title", widget: "string" },
+            { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" },
+            { label: "Author", name: "author", widget: "string", default: "Roald van Buuren" },
+            { label: "Type", name: "kind", widget: "select", options: ["Research", "Opinion", "Interview", "Field notes", "News"], default: "Opinion" },
+            { label: "Summary (shown in the Insights list)", name: "summary", widget: "text" },
+            { label: "Subtitle (optional, under the title)", name: "subtitle", widget: "string", required: false },
+            { label: "Cover image (optional)", name: "cover", widget: "image", required: false },
+            { label: "Cover description (for screen readers)", name: "cover_alt", widget: "string", required: false },
+            { label: "Hide from the site (draft)", name: "draft", widget: "boolean", default: false, required: false },
+            { label: "Article", name: "body", widget: "markdown" }
+          ]
+        }]
+      }
+    });
+    CMS.registerPreviewStyle("/assets/q4-labs.css");
+    CMS.registerPreviewStyle("/assets/product.css");
   </script>
 </body>
 </html>
