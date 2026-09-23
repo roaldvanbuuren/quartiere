@@ -489,3 +489,133 @@
 .dark-band a,.p-spec dd a {
   border-bottom:1px solid currentColor
 }
+
+/* Stats strip */
+.p-stats {
+  background:var(--ink);
+  color:var(--paper);
+  padding:80px 0
+}
+
+.p-stats-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid rgba(238,229,212,.2)
+}
+
+.p-stats-grid div {
+  padding:30px 30px 30px 0;
+  border-bottom:1px solid rgba(238,229,212,.2)
+}
+
+.p-stats-grid div + div {
+  padding-left:30px;
+  border-left:1px solid rgba(238,229,212,.2)
+}
+
+.p-stats-grid b {
+  display:block;
+  font:400 clamp(64px,7vw,110px)/.9 'Instrument Serif';
+  letter-spacing:-.04em
+}
+
+.p-stats-grid span {
+  display:block;
+  margin-top:14px;
+  font:10px 'DM Mono';
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(238,229,212,.6)
+}
+
+.p-stats p {
+  margin:30px 0 0;
+  max-width:720px;
+  font-size:15px;
+  line-height:1.75;
+  color:rgba(238,229,212,.72)
+}
+
+/* Comparison table */
+.p-compare {
+  width:100%;
+  border-collapse:collapse;
+  border-top:1px solid var(--line)
+}
+
+.p-compare th,.p-compare td {
+  text-align:left;
+  vertical-align:top;
+  padding:24px 24px 24px 0;
+  border-bottom:1px solid var(--line)
+}
+
+.p-compare thead th {
+  font:10px 'DM Mono';
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#777066;
+  font-weight:400
+}
+
+.p-compare thead th:nth-child(2) {
+  color:var(--blue)
+}
+
+.p-compare tbody th {
+  width:22%;
+  font:400 30px/1 'Instrument Serif';
+  letter-spacing:-.02em
+}
+
+.p-compare td {
+  width:39%;
+  font-size:16px;
+  line-height:1.7;
+  color:#4f4d45
+}
+
+.p-compare td:first-of-type {
+  color:var(--ink)
+}
+
+@media(max-width:700px) {
+  .p-stats-grid {
+    grid-template-columns:1fr
+  }
+
+  .p-stats-grid div + div {
+    padding-left:0;
+    border-left:0
+  }
+
+  .p-compare thead {
+    display:none
+  }
+
+  .p-compare tr {
+    display:block;
+    padding:20px 0;
+    border-bottom:1px solid var(--line)
+  }
+
+  .p-compare th,.p-compare td {
+    display:block;
+    width:auto;
+    padding:6px 0;
+    border:0
+  }
+
+  .p-compare td:first-of-type:before {
+    content:'Polysoma · ';
+    font:10px 'DM Mono';
+    color:var(--blue)
+  }
+
+  .p-compare td:last-of-type:before {
+    content:'Survey panel · ';
+    font:10px 'DM Mono';
+    color:#777066
+  }
+
+}
