@@ -4,7 +4,6 @@ date: 2026-09-23
 author: "Roald van Buuren"
 kind: Opinion
 summary: "In 1471 a Florentine workshop hoisted a gilded ball onto the top of the cathedral with machines built by a man who had been dead for 25 years. One of the apprentices was Leonardo. It is still the best lesson I know about how tools actually get adopted."
-draft: true
 ---
 
 On 27 May 1471, Florence watched a gilded copper ball rise to the very top of its cathedral.

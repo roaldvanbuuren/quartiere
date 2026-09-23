@@ -4,7 +4,6 @@ date: 2026-09-23
 author: "Roald van Buuren"
 kind: Opinion
 summary: "When social media arrived, most companies gave it to whoever had a Twitter account. AI is the same moment with far more at stake, and the same mistake is already being made."
-draft: true
 ---
 
 Around 2010, I watched a lot of companies discover social media.

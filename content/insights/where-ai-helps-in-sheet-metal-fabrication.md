@@ -5,7 +5,6 @@ author: "Roald van Buuren"
 kind: Field notes
 summary: "A practical guide for fabricators and the software companies that serve them: quoting, setup, specifications and support, and where people should stay in charge."
 subtitle: "A practical guide for fabricators and the software companies that serve them."
-draft: true
 ---
 
 ###### Why this guide
