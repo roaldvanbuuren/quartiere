@@ -4,6 +4,7 @@ date: 2026-01-12
 author: "Roald van Buuren"
 kind: Opinion
 summary: "The 1-9-90 rule, and why you should use the noise to investigate but the data to make the final call."
+canonical: "https://elocollective.com/logs/the-vocal-minority"
 ---
 
 When you are building a public product, whether a game, app or something else, the vocal minority vs. silent majority is one of the most difficult things to navigate, especially in the age of social media where every opinion polarizes to the extreme.

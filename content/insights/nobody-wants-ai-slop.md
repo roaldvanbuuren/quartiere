@@ -4,6 +4,7 @@ date: 2026-01-06
 author: "Quartiere"
 kind: Interview
 summary: "Joost van Dreunen on why people pull towards connection with others, not the latest technology."
+canonical: "https://elocollective.com/logs/gamesindustry-biz-interview-with-joost-van-dreunen-nobody-wants-ai-slop"
 ---
 
 Joost van Dreunen, Advisor of ELO and CEO of data insights firm Aldora, was interviewed by GamesIndustry.biz

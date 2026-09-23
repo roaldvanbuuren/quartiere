@@ -797,3 +797,9 @@ a.i-item:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-u
 .a-body h3{margin-top:10px}
 .a-body .a-label + h3{margin-top:8px}
 .a-body .a-label{margin-top:56px}
+
+/* Legal pages */
+.a-todo{background:#f3d9a4;color:#17231f;padding:0 4px}
+.a-body td{font-size:14px}
+.site-footer-bottom .legal-links a{margin-left:14px}
+.site-footer-bottom .legal-links a:hover{text-decoration:underline}

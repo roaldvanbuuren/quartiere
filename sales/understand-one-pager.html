@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Quartiere · Understand</title>
+<style>
+@font-face{font-family:"Instrument Serif";src:url(../assets/fonts/instrument-serif-latin-400-normal.woff2)}
+@font-face{font-family:"Instrument Serif";font-style:italic;src:url(../assets/fonts/instrument-serif-latin-400-italic.woff2)}
+@font-face{font-family:Manrope;font-weight:400;src:url(../assets/fonts/manrope-latin-400-normal.woff2)}
+@font-face{font-family:Manrope;font-weight:500;src:url(../assets/fonts/manrope-latin-500-normal.woff2)}
+@font-face{font-family:Manrope;font-weight:600;src:url(../assets/fonts/manrope-latin-600-normal.woff2)}
+@font-face{font-family:"DM Mono";font-weight:400;src:url(../assets/fonts/dm-mono-latin-400-normal.woff2)}
+@font-face{font-family:"DM Mono";font-weight:500;src:url(../assets/fonts/dm-mono-latin-500-normal.woff2)}
+@page{size:A4;margin:0}
+:root{--ink:#17231f;--olive:#354536;--paper:#eee5d4;--blue:#2a70a1;--line:rgba(23,35,31,.16);--mute:rgba(23,35,31,.66)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:210mm;height:297mm;background:var(--paper);color:var(--ink);font:400 8.2pt/1.42 Manrope,sans-serif}
+.page{padding:10mm 14mm 8mm;height:297mm;display:flex;flex-direction:column}
+.mono{font-family:"DM Mono",monospace;font-size:6.9pt;letter-spacing:.12em;text-transform:uppercase}
+.top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:4mm}
+.brand{font-family:"DM Mono";font-weight:500;letter-spacing:.32em;font-size:8.5pt}
+.brand i{font-style:normal;color:var(--blue)}
+.hero{display:grid;grid-template-columns:1.55fr 1fr;gap:9mm;padding:5.5mm 0 5mm;border-bottom:1px solid var(--line)}
+.label{color:var(--blue);margin-bottom:3mm}
+h1{font-family:"Instrument Serif";font-weight:400;font-size:30pt;line-height:1;letter-spacing:-.01em}
+h1 em{color:var(--olive)}
+.lede{font-size:9.5pt;line-height:1.5;margin-top:4mm;max-width:118mm}
+.facts{background:var(--ink);color:var(--paper);padding:5mm 5.5mm;display:flex;flex-direction:column;gap:2.6mm;align-self:start}
+.facts div{display:flex;justify-content:space-between;gap:4mm;border-bottom:1px solid rgba(238,229,212,.18);padding-bottom:2.6mm}
+.facts div:last-child{border:0;padding:0}
+.facts span:first-child{opacity:.62}
+.facts b{font-weight:500;text-align:right}
+.facts .fee b{font-family:"Instrument Serif";font-size:17pt;letter-spacing:0;text-transform:none;line-height:1}
+mark{background:#f3d98a;color:var(--ink);padding:0 1mm}
+h2{font-family:"Instrument Serif";font-weight:400;font-size:14.5pt;line-height:1.1;margin-bottom:2.2mm}
+.row{display:grid;gap:8mm;padding:3.6mm 0;border-bottom:1px solid var(--line)}
+.r2{grid-template-columns:1fr 1fr}
+.r3{grid-template-columns:repeat(3,1fr);gap:6mm}
+ul{list-style:none}
+li{padding:1mm 0 1mm 4.5mm;position:relative;border-top:1px solid var(--line)}
+li:first-child{border-top:0}
+li::before{content:"";position:absolute;left:0;top:2.5mm;width:1.6mm;height:1.6mm;background:var(--olive);transform:rotate(45deg)}
+li b{font-weight:600}
+.weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:6mm}
+.wk{border-top:2px solid var(--olive);padding-top:2.2mm}
+.wk .mono{color:var(--blue);margin-bottom:1.3mm;display:block}
+.wk h3{font-weight:600;font-size:8.8pt;margin-bottom:1mm}
+.wk p{color:var(--mute)}
+.wkrow{grid-template-columns:32mm 1fr;gap:6mm;align-items:start}
+.cards{display:flex;flex-direction:column;gap:2.4mm}
+.card{border-top:1px solid var(--line);padding-top:2.2mm}
+.card:first-child{border:0;padding-top:0}
+.card h3{font-family:"Instrument Serif";font-weight:400;font-size:12pt;margin-bottom:.6mm}
+.card p{color:var(--mute)}
+.after{flex:1;display:grid;grid-template-columns:1.5fr 1fr;gap:8mm;padding-top:4.2mm}
+.cta{background:var(--olive);color:var(--paper);padding:5mm 5.5mm;display:flex;flex-direction:column;justify-content:space-between}
+.cta h2{margin:0 0 2mm}
+.cta p{opacity:.85}
+.cta .mono{margin-top:4mm;opacity:.9}
+.foot{display:flex;justify-content:space-between;color:var(--mute);border-top:1px solid var(--line);padding-top:3mm;margin-top:4mm}
+</style></head>
+<body><div class="page">
+
+<div class="top"><div class="brand">QUARTIERE<i> ◆</i></div><div class="mono">Human × Machine · The Q4 Method · Step 01</div></div>
+
+<section class="hero">
+  <div>
+    <div class="mono label">01 / Understand</div>
+    <h1>See the work clearly <em>before</em> you change it.</h1>
+    <p class="lede">Most AI programmes start with a tool. We start with the work. In three to four weeks we map how your business actually runs, find where time and judgement are lost, and hand you a costed plan that says where AI will pay back first, and where it will not.</p>
+  </div>
+  <div class="facts mono">
+    <div><span>Duration</span><b>3 to 4 weeks</b></div>
+    <div><span>Team</span><b>2 senior operators</b></div>
+    <div><span>Scope</span><b>1 business unit,<br>up to 3 workflows</b></div>
+    <div class="fee"><span>Fixed fee</span><b><mark>€ [to confirm]</mark></b></div>
+    <div><span>Commitment</span><b>None beyond this step</b></div>
+  </div>
+</section>
+
+<section class="row r2">
+  <div>
+    <h2>What you get</h2>
+    <ul>
+      <li><b>A map of how the work really flows.</b> People, decisions, information and systems, including the parts nobody writes down.</li>
+      <li><b>Where the hours and the judgement go.</b> The specific handoffs, searches, retyping and waiting that slow good people down, sized in time and cost.</li>
+      <li><b>A costed plan ranked by impact.</b> Each opportunity with expected effort, cost, payback and risk, and a clear first move.</li>
+      <li><b>A tool choice for each step.</b> Something you already own, one of our systems, or something built. Vendor-neutral, with the reasoning written down.</li>
+      <li><b>A readout to your leadership team,</b> plus a shorter version for the people whose work is in scope.</li>
+    </ul>
+  </div>
+  <div>
+    <h2>What we need from you</h2>
+    <ul>
+      <li>One sponsor with authority over the workflows in scope.</li>
+      <li>Access to 8 to 12 people who do the work, about 2 hours each.</li>
+      <li>Read access to the relevant tools, documents and process data, under NDA.</li>
+    </ul>
+    <h2 style="margin-top:3.5mm">How we work</h2>
+    <div class="cards">
+      <div class="card"><h3>Senior people, hands on.</h3><p>The people who scope the work are the people who do it. No junior teams learning on your time.</p></div>
+      <div class="card"><h3>People in from day one.</h3><p>We work with the teams doing the job, so the plan reflects reality and has their support before anything is built.</p></div>
+      <div class="card"><h3>A decision, not a deck.</h3><p>You finish with a clear first move and its business case. If the answer is "not yet", we will tell you.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="row wkrow">
+  <h2>How the four weeks run</h2>
+    <div class="weeks">
+      <div class="wk"><span class="mono">Week 1</span><h3>Frame</h3><p>Kick-off with leadership. Agree the workflows in scope and what success means.</p></div>
+      <div class="wk"><span class="mono">Week 2</span><h3>Observe</h3><p>Time with the teams doing the work. Interviews, shadowing, and a look at the tools and data.</p></div>
+      <div class="wk"><span class="mono">Week 3</span><h3>Size</h3><p>Quantify the losses, test the opportunities with the people involved, cost the options.</p></div>
+      <div class="wk"><span class="mono">Week 3–4</span><h3>Decide</h3><p>Plan written, reviewed with you, presented to leadership.</p></div>
+    </div>
+</section>
+
+<section class="after">
+  <div>
+    <h2>What happens next</h2>
+    <p style="color:var(--mute);margin-bottom:2.5mm">Understand stands on its own. The plan is yours whether or not you continue with us. If you do, it feeds straight into the next steps of the Q4 Method:</p>
+    <ul>
+      <li><b>Design.</b> Redesign the chosen workflow and decide where AI takes the load and where people keep the judgement.</li>
+      <li><b>Build, 8 to 12 weeks.</b> The first system live in daily work, built alongside the people who use it.</li>
+      <li><b>Enable, ongoing.</b> Training, internal champions and a system that keeps improving.</li>
+    </ul>
+  </div>
+  <div class="cta">
+    <div><h2>Start with one conversation.</h2><p>Thirty minutes to see whether Understand fits where you are now. No preparation needed.</p></div>
+    <div class="mono">quartiere.vercel.app/contact</div>
+  </div>
+</section>
+
+<div class="foot mono"><span>Quartiere · Human × Machine</span><span>Fee excludes VAT and travel outside the agreed location</span></div>
+</div></body></html>

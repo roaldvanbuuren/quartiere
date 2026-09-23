@@ -46,7 +46,7 @@ marked.use({
   },
 });
 
-const slugify = (s) => s.toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const slugify = (s) => s.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 const posts = fs.readdirSync(POSTS)
   .filter((f) => f.endsWith(".md"))
@@ -69,7 +69,9 @@ for (const p of posts) {
     .replace("{{author}}", esc(p.author || "Quartiere"))
     .replace("{{date}}", longDate(p.date))
     .replace("{{cover}}", cover)
-    .replace("{{body}}", p.body);
+    .replace("{{body}}", p.body)
+    // Posts first published elsewhere point search engines at the original.
+    .replace("</head>", p.canonical ? `<link rel="canonical" href="${esc(p.canonical)}">\n</head>` : "</head>");
   fs.mkdirSync(path.join(OUT, p.slug), { recursive: true });
   fs.writeFileSync(path.join(OUT, p.slug, "index.html"), html);
 }

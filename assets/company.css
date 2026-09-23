@@ -586,7 +586,7 @@ a {
 .company-hero-bg {
   position:absolute;
   inset:0;
-  background-image:url('company-hero.jpg');
+  background-image:url('company-hero.webp');
   background-size:cover;
   background-position:center center;
   filter:saturate(.86)

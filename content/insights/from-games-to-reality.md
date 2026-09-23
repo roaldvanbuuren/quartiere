@@ -5,6 +5,7 @@ author: "Roald van Buuren"
 kind: Research
 summary: "How gaming is becoming a system for measuring, training and modelling human behaviour: twelve case studies, six levels of real-world value, and what it means for decision intelligence."
 subtitle: "How gaming is becoming a system for measuring, training and modelling human behaviour."
+canonical: "https://elocollective.com/from-games-to-reality"
 ---
 
 ###### Executive summary
