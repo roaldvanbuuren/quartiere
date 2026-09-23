@@ -773,14 +773,17 @@
 .a-table table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.6}
 .a-table th{text-align:left;font:400 10px 'DM Mono';letter-spacing:.14em;text-transform:uppercase;color:#777066;padding:12px 16px 12px 0;border-bottom:1px solid rgba(23,35,31,.35)}
 .a-table td{padding:14px 16px 14px 0;border-bottom:1px solid rgba(23,35,31,.15);vertical-align:top}
-.a-table td:first-child{color:#17231f;font-weight:600;white-space:nowrap}
+.a-table td:first-child{color:#17231f;font-weight:600}
+.a-table table{table-layout:auto}.a-table th,.a-table td{min-width:120px}
+.a-table td:first-child,.a-table th:first-child{width:28%}
+@media(max-width:700px){.a-table table,.a-table thead,.a-table tbody,.a-table tr,.a-table td{display:block;width:auto!important;min-width:0}.a-table thead{display:none}.a-table tr{border-bottom:1px solid rgba(23,35,31,.35);padding:14px 0}.a-table td{border:0;padding:4px 0}.a-table td[data-h]::before{content:attr(data-h);display:block;font:400 10px 'DM Mono';letter-spacing:.14em;text-transform:uppercase;color:#777066;margin-top:6px}}
 .a-case{border-top:1px solid rgba(23,35,31,.22);padding-top:26px;margin-top:40px}
 .a-case .a-label{margin-top:0}
 .a-notes{margin-top:70px;padding-top:24px;border-top:1px solid rgba(23,35,31,.22);font-size:15px;color:#4f4d45}
 .a-q{margin-top:30px}
 .a-source{margin-top:40px;padding-top:18px;border-top:1px solid rgba(23,35,31,.22);font-size:14px;color:#625d53}
 .a-source a{color:#2a70a1;border-bottom:1px solid currentColor}
-@media(max-width:700px){.a-hero{padding:150px 0 60px}.a-body{font-size:16px;padding:60px 0 80px}.a-table td:first-child{white-space:normal}}
+@media(max-width:700px){.a-hero{padding:150px 0 60px}.a-body{font-size:16px;padding:60px 0 80px}}
 
 /* Insights index: linked items */
 a.i-item{color:inherit;text-decoration:none}
@@ -801,5 +804,3 @@ a.i-item:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-u
 /* Legal pages */
 .a-todo{background:#f3d9a4;color:#17231f;padding:0 4px}
 .a-body td{font-size:14px}
-.site-footer-bottom .legal-links a{margin-left:14px}
-.site-footer-bottom .legal-links a:hover{text-decoration:underline}

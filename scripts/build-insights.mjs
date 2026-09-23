@@ -40,7 +40,7 @@ marked.use({
     },
     table(token) {
       const head = token.header.map((c) => `<th>${this.parser.parseInline(c.tokens)}</th>`).join("");
-      const rows = token.rows.map((r) => "<tr>" + r.map((c) => `<td>${this.parser.parseInline(c.tokens)}</td>`).join("") + "</tr>").join("");
+      const rows = token.rows.map((r) => "<tr>" + r.map((c, i) => `<td${i ? ` data-h="${esc(token.header[i].text)}"` : ""}>${this.parser.parseInline(c.tokens)}</td>`).join("") + "</tr>").join("");
       return `<div class="a-table"><table><thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table></div>\n`;
     },
   },
