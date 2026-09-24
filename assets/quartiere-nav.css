@@ -160,3 +160,8 @@ section.contact a:hover,
   cursor:pointer;
 }
 .form button:hover,.enquiry-form button:hover{background:#354536 !important}
+
+/* Four-quarter mark before the wordmark (nav and footer share it) */
+.logo-mark{display:inline-block;width:.6em;height:.6em;margin-right:.2em;vertical-align:-.02em;fill:currentColor;overflow:visible}
+.logo-mark .logo-mark-accent{opacity:.5}
+.site-nav .logo{display:inline-flex;align-items:center}
