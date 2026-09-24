@@ -35,7 +35,7 @@ A CV records where someone has been. An interview records what someone says they
 
 The final step remains largely experimental. If behavioural models can be derived from sufficiently rich gameplay, games become potential laboratories for building models of human decision-making that can subsequently be placed inside simulations of real-world systems.
 
-###### 01 / Transfer
+###### Transfer
 
 ## The problem with the traditional transfer argument
 
@@ -47,7 +47,7 @@ A competitive FPS may require rapid visual acquisition, target tracking and spat
 
 The useful unit of analysis is therefore not gamer but behaviour performed under a particular set of environmental constraints.
 
-###### 02 / Behavioural environments
+###### Behavioural environments
 
 ## Why games are unusually useful behavioural environments
 
@@ -63,43 +63,43 @@ A game can specify objectives, rules, rewards, penalties, information availabili
 
 ## Twelve cases where the boundary starts to disappear.
 
-###### 03 / FAA
+###### FAA
 
 ### The FAA goes looking for gamers
 
 In 2026, the Federal Aviation Administration explicitly launched a recruitment campaign aimed at gamers as part of its effort to recruit the next generation of air traffic controllers. The FAA identified characteristics associated with gaming as relevant to air traffic control, including cognitive function, multitasking, spatial awareness, strategy and problem-solving. The deeper question is whether gameplay can identify people whose existing behavioural repertoire overlaps with the demands of the role.
 
-###### 04 / DRONE OPERATORS
+###### DRONE OPERATORS
 
 ### Gamers as drone operators
 
 Research comparing experienced pilots, experienced video game players and controls on tasks relevant to unmanned aerial systems found that pilots outperformed gamers on some complex multi-attribute cognitive tasks, while gamers performed strongly on visual acquisition, identification and target tracking. Gamers and pilots performed similarly on simulated UAS landing tasks. The interface between human and machine is changing, and gaming has spent decades training people to operate through screen-based, sensor-mediated interfaces.
 
-###### 05 / SPACE FORTRESS
+###### SPACE FORTRESS
 
 ### Space Fortress and abstract skill transfer
 
 Space Fortress was developed as a controlled environment for studying complex skill acquisition. Research associated with military aviation found evidence that structured training using the game could improve subsequent aviation performance. The game did not look like an aircraft. The relevant skills were abstract: attention management, competing priorities, situational awareness and workload control.
 
-###### 06 / SURGERY
+###### SURGERY
 
 ### Surgery and the value of controlled failure
 
 A randomized controlled trial tested whether game-based training could improve surgical residents' ability to recognise and solve equipment problems. The game-trained group solved a median of 59% of standardized malfunctions compared with 33% for controls. The game was training situational awareness under disruption, creating repeated exposure to failure states that are expensive and difficult to reproduce physically.
 
-###### 07 / EMERGENCY MEDICINE
+###### EMERGENCY MEDICINE
 
 ### Emergency medicine and changing heuristics
 
 A randomized controlled trial compared a serious game with traditional educational material for trauma triage. Physicians who played the game under-triaged severely injured patients 53% of the time compared with 64% among the traditional education group. Six months later the difference remained: 57% versus 74%. The mechanism looks more like decision, consequence, recognition of error, revised mental model.
 
-###### 08 / WORLD OF WARCRAFT
+###### WORLD OF WARCRAFT
 
 ### World of Warcraft and the accidental pandemic
 
 The 2005 Corrupted Blood incident became an accidental behavioural laboratory. A disease mechanic escaped its intended raid environment and spread through the wider game world. Players fled, helped infected players, attempted quarantine, deliberately spread the infection and experimented with the system. The event was not a miniature human pandemic, but it demonstrated that human behaviour can generate emergent system-level effects inside a virtual environment.
 
-###### 09 / SEA HERO QUEST
+###### SEA HERO QUEST
 
 ### Sea Hero Quest and measuring people at scale
 

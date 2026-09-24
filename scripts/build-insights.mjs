@@ -77,7 +77,7 @@ for (const p of posts) {
 }
 
 const list = posts.map((p, i) =>
-  `<a class="i-item" href="${p.slug}/"><div class="i-num">${String(i + 1).padStart(2, "0")}</div>` +
+  `<a class="i-item" href="${p.slug}/">` +
   `<div><h3>${esc(p.title)}</h3><p>${esc(p.summary || "")}</p></div>` +
   `<div class="i-meta">${esc(p.kind || "Insight")} · ${shortDate(p.date)}<br><em class="i-read">Read →</em></div></a>`
 ).join("");

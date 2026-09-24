@@ -391,7 +391,7 @@
 
 .i-item {
   display:grid;
-  grid-template-columns:120px 1fr 200px;
+  grid-template-columns:1fr 200px;
   gap:40px;
   padding:38px 0;
   border-bottom:1px solid var(--line);
