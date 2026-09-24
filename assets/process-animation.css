@@ -8,108 +8,32 @@
   color: var(--olive);
 }
 
-.q-process-svg {
-  color: var(--ink);
-}
+/* The mosaic: tiles gather into four quarters, blue grout joins them, and a person fills the centre.
+   Default (no JS) is the finished mosaic; the stage attribute set by the scroll script rewinds it. */
+.q-process-svg{color:var(--ink);overflow:visible}
+.q-mosaic .t{fill:var(--c);transform-box:fill-box;transform-origin:center;
+  transition:transform 1s cubic-bezier(.2,.75,.25,1) var(--d),opacity .6s ease var(--d),fill .7s ease var(--d)}
+.q-mosaic .q-caption{fill:var(--muted);font:9px 'DM Mono',monospace;letter-spacing:.14em;opacity:.8}
 
-.q-process-svg .q-bg {
-  display: none;
-}
+/* 01 Understand: loose, muted pieces scattered over the table */
+.q-process[data-stage="0"] .q-mosaic .t-q{transform:translate(var(--dx),var(--dy)) rotate(var(--r));fill:var(--g);opacity:.75}
+.q-process[data-stage="0"] .q-mosaic .t-s,
+.q-process[data-stage="0"] .q-mosaic .t-c{transform:translate(var(--dx),var(--dy)) rotate(var(--r)) scale(.3);opacity:0}
 
-.q-process-svg .q-links {
-  color: var(--olive);
-  stroke: var(--olive);
-}
+/* 02 Design: the pieces settle into four quarters, centre still open */
+.q-process[data-stage="1"] .q-mosaic .t-q{fill:var(--c);opacity:.55}
+.q-process[data-stage="1"] .q-mosaic .t-s,
+.q-process[data-stage="1"] .q-mosaic .t-c{transform:scale(.3);opacity:0}
 
-.q-process-svg .q-links path {
-  stroke: var(--olive);
-  stroke-width: 1.2;
-  stroke-dasharray: 5 7;
-  stroke-opacity: .3;
-  transition: stroke-opacity .45s ease, stroke-dashoffset .65s ease;
-}
+/* 03 Build: blue grout joins the quarters; the centre is framed but empty */
+.q-process[data-stage="2"] .q-mosaic .t-q{opacity:.9}
+.q-process[data-stage="2"] .q-mosaic .t-c{transform:scale(.3);opacity:0}
 
-.q-process-svg .q-connection-dots circle {
-  fill: var(--paper);
-  stroke: var(--olive);
-  stroke-width: 1;
-  r: 3px;
-}
-
-.q-process-svg .q-system-nodes rect {
-  fill: var(--paper2);
-  stroke: rgba(53, 69, 54, .48);
-  stroke-width: 1;
-}
-
-.q-process-svg .q-system-nodes text {
-  fill: var(--muted);
-  font-size: 9px;
-  letter-spacing: .14em;
-}
-
-.q-process-svg .q-system-nodes [data-node="person"] circle:first-child {
-  fill: var(--paper);
-  stroke: var(--olive);
-  stroke-width: 1.2;
-}
-
-.q-process-svg .q-system-nodes [data-node="person"] circle:not(:first-child),
-.q-process-svg .q-system-nodes [data-node="person"] path {
-  fill: var(--olive);
-  stroke: var(--olive);
-}
-
-.q-process-svg .q-designed rect {
-  fill: var(--paper2);
-  fill-opacity: .62;
-  stroke: var(--olive);
-  stroke-opacity: .5;
-  stroke-width: 1;
-  stroke-dasharray: none;
-}
-
-.q-process-svg .q-designed path {
-  stroke: var(--olive);
-  stroke-opacity: .34;
-}
-
-.q-process-svg .q-designed circle {
-  fill: var(--olive);
-}
-
-.q-process-svg .q-tech rect {
-  fill: var(--paper2);
-  stroke: var(--olive);
-  stroke-width: 1;
-}
-
-.q-process-svg .q-tech text {
-  fill: var(--ink);
-  font-size: 9px;
-  letter-spacing: .14em;
-}
-
-.q-process-svg .q-tech path {
-  stroke: var(--olive);
-  stroke-opacity: .42;
-}
-
-.q-process-svg .q-tech circle {
-  fill: var(--terra);
-}
-
-.q-process-svg .q-flow {
-  color: var(--olive);
-  stroke: var(--olive);
-  stroke-width: 1.3;
-}
-
-.q-process-svg .q-caption {
-  color: var(--muted);
-  font-size: 9px;
-  letter-spacing: .14em;
-}
+/* 04 Enable (and the default): the person fills the centre; a few tiles across the quarters warm up */
+.q-mosaic .t-champ{fill:#c49a45}
+.q-process[data-stage="0"] .q-mosaic .t-champ{fill:var(--g)}
+.q-process[data-stage="1"] .q-mosaic .t-champ,
+.q-process[data-stage="2"] .q-mosaic .t-champ{fill:var(--c)}
 
 .q-process-steps {
   align-self: stretch;
@@ -151,25 +75,6 @@
 
 .q-step p {
   color: var(--muted);
-}
-
-.q-process[data-stage="0"] .q-connection-dots circle {
-  fill: var(--terra);
-  stroke: none;
-}
-
-.q-process[data-stage="1"] .q-links path {
-  stroke-opacity: .7;
-  stroke-dashoffset: 0;
-}
-
-.q-process[data-stage="1"] .q-connection-dots circle {
-  fill: var(--terra);
-}
-
-.q-process[data-stage="3"] .q-system-nodes [data-node="person"] circle:first-child {
-  stroke: var(--olive);
-  stroke-width: 2;
 }
 
 @media (prefers-reduced-motion: reduce) {
