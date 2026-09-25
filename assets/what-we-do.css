@@ -673,3 +673,10 @@ a {
   }
 
 }
+
+/* Q4 Method cards: the same four mosaic stages as on Home, in place of the dot grids */
+.cap:after{display:none}
+.cap-mm{position:absolute;right:26px;top:22px;width:112px;height:112px}
+.cap-mm svg{width:100%;height:100%;overflow:visible;display:block}
+@media(max-width:900px){.cap-mm{width:84px;height:84px;right:18px;top:18px}}
+@media(max-width:900px){.cap .cap-num{display:block;padding-right:96px;line-height:1.7}}

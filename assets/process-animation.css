@@ -105,5 +105,5 @@
 .mm-wait .mini-mosaic .t-q{transform:translate(var(--dx),var(--dy)) rotate(var(--r));fill:var(--g);opacity:.75}
 .mm-wait .mini-mosaic .t-s,.mm-wait .mini-mosaic .t-c{transform:translate(var(--dx),var(--dy)) rotate(var(--r)) scale(.3);opacity:0}
 [data-mm="0"].mm-wait .t-q{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--r)) scale(.5)}
-@media (max-width:850px){.overview-visual[data-mm] .t{--k:0s}}
+@media (max-width:850px){[data-mm] .t{--k:0s}}
 @media (prefers-reduced-motion:reduce){.mini-mosaic .t{transition:none !important}}
