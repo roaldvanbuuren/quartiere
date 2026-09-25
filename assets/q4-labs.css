@@ -306,3 +306,33 @@ a {
   }
 
 }
+
+/* System cards with a product visual. Touch and small screens: the visual is a band on top of the card.
+   Mouse devices: the visual fills the card with the name and headline on it; hover or focus slides up an olive panel with the detail. */
+.lab-img{display:block;width:calc(100% + 68px);max-width:none;height:240px;object-fit:cover;object-position:center top;margin:-34px -34px 26px;background:#17231f}
+.lab{overflow:hidden}
+@media (hover:hover) and (pointer:fine) and (min-width:901px){
+  .labs-grid .lab{background:#17231f !important;color:#eee5d4;isolation:isolate;min-height:600px}
+  .labs-grid .lab:after{display:none}
+  .labs-grid .lab-img{position:absolute;inset:0;width:100%;height:100%;margin:0;z-index:-2;filter:grayscale(.35) brightness(.7);transition:transform .8s ease,filter .5s ease}
+  .labs-grid .lab:before{content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(to top,rgba(23,35,31,.97) 0%,rgba(23,35,31,.82) 38%,rgba(23,35,31,.45) 70%,rgba(23,35,31,.7) 100%);
+    transition:background .5s ease}
+  .labs-grid .lab .num{color:#c9c1ae}
+  .labs-grid .lab .type{background-color:rgba(23,35,31,.6);background-image:none;border-color:rgba(238,229,212,.3);color:#eee5d4}
+  .labs-grid .lab h2{color:#eee5d4;margin:auto 0 0;font-size:clamp(44px,4.2vw,64px);max-width:560px}
+  .labs-grid .lab p,.labs-grid .lab .detail,.labs-grid .lab .lab-link{max-height:0;opacity:0;overflow:hidden;margin:0;padding:0;border:0;
+    transition:max-height .55s cubic-bezier(.22,.8,.24,1),opacity .35s ease,margin .55s ease,padding .55s ease}
+  .labs-grid .lab p{color:#e9e1cf}
+  .labs-grid .lab .detail{color:#e9e1cf}
+  .labs-grid .lab .detail strong{color:#c9c1ae}
+  .labs-grid .lab .lab-link{color:#eee5d4;display:block;width:fit-content}
+  .labs-grid .lab:hover:before,.labs-grid .lab:focus-visible:before{background:rgba(53,69,54,.93)}
+  .labs-grid .lab:hover .lab-img,.labs-grid .lab:focus-visible .lab-img{transform:scale(1.03)}
+  .labs-grid .lab:hover h2,.labs-grid .lab:focus-visible h2{margin-top:auto}
+  .labs-grid .lab:hover p,.labs-grid .lab:focus-visible p{max-height:12em;opacity:1;margin:22px 0 0}
+  .labs-grid .lab:hover .detail,.labs-grid .lab:focus-visible .detail{max-height:10em;opacity:1;margin-top:22px;padding-top:20px;border-top:1px solid rgba(238,229,212,.25)}
+  .labs-grid .lab:hover .lab-link,.labs-grid .lab:focus-visible .lab-link{max-height:3em;opacity:1;margin-top:22px;padding-bottom:6px;border-bottom:1px solid currentColor}
+  .labs-grid .lab:hover{background:#17231f !important}
+}
+@media (prefers-reduced-motion:reduce){.lab-img,.labs-grid .lab:before,.labs-grid .lab p,.labs-grid .lab .detail,.labs-grid .lab .lab-link{transition:none !important}}
