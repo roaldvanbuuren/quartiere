@@ -507,7 +507,7 @@ nav.q-nav-architectural .links a{font-family:var(--mono);font-size:10px;letter-s
 
 /* Q4 Method scroll story: give each step more room so the mosaic stays pinned through all four stages */
 @media(min-width:901px){
-  .q-process .q-step{min-height:62vh;align-items:start;align-content:center;padding:0}
+  .q-process .q-step{min-height:62vh;align-items:start;align-content:center;padding:0 0 0 22px}
   .q-process-steps{padding-bottom:18vh}
   .q-process-sticky{top:max(90px,calc(50vh - 330px))}
 }
