@@ -112,3 +112,6 @@
   .hero.q-hero-preserved .hero-copy { padding: 130px 0 60px; justify-content: flex-end; width: calc(100% - 36px); }
   .hero.q-hero-preserved .hero-art::after { background: linear-gradient(0deg, rgba(18,29,25,.9) 0%, rgba(18,29,25,.55) 55%, rgba(18,29,25,.25) 100%); }
 }
+
+/* New hero: keep the domed city in view on narrow screens */
+@media (max-width: 900px) { .hero.q-hero-preserved .hero-art img { object-position: 80% center !important; } }

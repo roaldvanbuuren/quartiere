@@ -101,3 +101,6 @@
   }
 
 }
+
+/* What we do: keep the temple and crane in frame */
+.hs-media img[src*="what-we-do-hero"]{object-position:82% center}
