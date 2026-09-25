@@ -40,3 +40,6 @@
 .iw-on .card-tags{opacity:0;transition:opacity .6s ease .9s}
 .iw-on .card-aside.iw-in .card-image{clip-path:inset(0 0 0 0)}
 .iw-on .card-aside.iw-in .card-tags{opacity:1}
+
+/* No light gap between the last industry and the company-size band */
+.company-fit{margin-top:0}

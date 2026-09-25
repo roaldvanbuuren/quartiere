@@ -193,5 +193,15 @@ html{scroll-padding-top:96px}
 .dark-band + .site-cta{border-top:1px solid rgba(238,229,212,.12)}
 
 /* Section headings rise gently into place as they enter the screen */
-.rv-on .rv{opacity:0;transform:translateY(14px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv-on .rv{opacity:0;transform:translateY(30px);transition:opacity 1.2s ease,transform 1.4s cubic-bezier(.2,.7,.2,1)}
 .rv-on .rv.rv-in{opacity:1;transform:none}
+
+/* Hero entrance: waits for fonts and the hero image, then eases in (no flash of fallback type) */
+.hero-wait .hs-copy>*,.hero-wait .hero-copy>*{opacity:0;transform:translateY(22px)}
+.hero-wait .hs-media img,.hero-wait .hero-art img{opacity:0;transform:scale(1.045)}
+.hero-go .hs-copy>*,.hero-go .hero-copy>*{opacity:1;transform:none;transition:opacity 1s ease,transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.hero-go .hs-copy>:nth-child(1),.hero-go .hero-copy>:nth-child(1){transition-delay:.15s}
+.hero-go .hs-copy>:nth-child(2),.hero-go .hero-copy>:nth-child(2){transition-delay:.3s}
+.hero-go .hs-copy>:nth-child(3),.hero-go .hero-copy>:nth-child(3){transition-delay:.48s}
+.hero-go .hs-copy>:nth-child(n+4),.hero-go .hero-copy>:nth-child(n+4){transition-delay:.62s}
+.hero-go .hs-media img,.hero-go .hero-art img{opacity:1;transform:none;transition:opacity 1.4s ease,transform 2.6s cubic-bezier(.2,.7,.2,1)}
