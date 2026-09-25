@@ -504,3 +504,10 @@ nav.q-nav-architectural .links a{font-family:var(--mono);font-size:10px;letter-s
 .q-fit-strip{padding-left:36px;padding-right:36px}
 @media(max-width:900px){.q-fit-hero-copy{left:18px;right:18px}.q-fit-strip{padding-left:18px;padding-right:18px}}
 .q-fit-hero-overhaul .q-fit-architectural-label{left:36px}@media(max-width:900px){.q-fit-hero-overhaul .q-fit-architectural-label{left:18px}}
+
+/* Q4 Method scroll story: give each step more room so the mosaic stays pinned through all four stages */
+@media(min-width:901px){
+  .q-process .q-step{min-height:62vh;align-items:start;align-content:center;padding:0}
+  .q-process-steps{padding-bottom:18vh}
+  .q-process-sticky{top:max(90px,calc(50vh - 330px))}
+}
