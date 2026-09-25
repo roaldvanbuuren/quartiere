@@ -724,3 +724,7 @@ a {
   .leader:hover p,.leader:focus-visible p,.leader:focus-within p{max-height:16em;opacity:1;margin-top:14px;transition-delay:0s,.12s,0s}
 }
 @media (prefers-reduced-motion:reduce){.leader-copy::before,.leader p{transition:none!important}}
+
+/* Align "Four quarters, one city." with the other section headings */
+.why-head{grid-template-columns:.6fr 1.4fr;gap:70px}
+@media(max-width:900px){.why-head{grid-template-columns:1fr;gap:12px}}

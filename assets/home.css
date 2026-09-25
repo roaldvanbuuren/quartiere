@@ -487,3 +487,20 @@ nav.q-nav-architectural .links a{font-family:var(--mono);font-size:10px;letter-s
   .q-system-material[data-q-book] .q-material-caption{padding:30px 26px;transition:opacity .8s ease,transform .8s ease}
   .q-system-material.is-closed .q-material-caption{transform:translateY(24px);opacity:0}
 }
+
+/* Headings in the serif, like every other page */
+.q-system-statement h2{font:400 clamp(58px,7vw,100px)/.86 'Instrument Serif';letter-spacing:-.05em}
+.q-service-copy h2{font:400 clamp(54px,6.2vw,92px)/.86 'Instrument Serif';letter-spacing:-.05em}
+.q-capability-header h2{font:400 clamp(50px,5.6vw,84px)/.88 'Instrument Serif';letter-spacing:-.045em}
+
+/* One page edge: contained sections start where the navbar and hero start */
+.container,.q-system-frame{width:min(1440px,calc(100% - 72px))}
+@media(max-width:900px){.container,.q-system-frame{width:calc(100% - 36px)}}
+/* Hero headline in the serif, like the other pages */
+.hero.q-hero-preserved .hero-copy h1{font-family:'Instrument Serif',serif;font-size:clamp(64px,8.2vw,124px);line-height:.84;letter-spacing:-.055em}
+@media(max-width:900px){.hero.q-hero-preserved .hero-copy h1{font-size:clamp(58px,12vw,92px)}}
+@media(max-width:600px){.hero.q-hero-preserved .hero-copy h1{font-size:clamp(54px,15vw,80px)}}
+.q-fit-hero-copy{left:36px;right:36px}
+.q-fit-strip{padding-left:36px;padding-right:36px}
+@media(max-width:900px){.q-fit-hero-copy{left:18px;right:18px}.q-fit-strip{padding-left:18px;padding-right:18px}}
+.q-fit-hero-overhaul .q-fit-architectural-label{left:36px}@media(max-width:900px){.q-fit-hero-overhaul .q-fit-architectural-label{left:18px}}
