@@ -36,9 +36,9 @@
 @media(max-width:900px){.company-fit{padding-left:18px;padding-right:18px}}
 
 /* Industry images reveal with a soft wipe as each row scrolls in */
-.iw-on .card-image{clip-path:inset(0 100% 0 0);transition:clip-path 1.3s cubic-bezier(.65,0,.25,1)}
+.iw-on .card-image{clip-path:inset(0 100% 0 0);opacity:0;transition:clip-path 1.4s cubic-bezier(.65,0,.25,1),opacity .9s ease}
 .iw-on .card-tags{opacity:0;transition:opacity .6s ease .9s}
-.iw-on .card-aside.iw-in .card-image{clip-path:inset(0 0 0 0)}
+.iw-on .card-aside.iw-in .card-image{clip-path:inset(0 0 0 0);opacity:1}
 .iw-on .card-aside.iw-in .card-tags{opacity:1}
 
 /* No light gap between the last industry and the company-size band */
