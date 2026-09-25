@@ -165,3 +165,17 @@ section.contact a:hover,
 .logo-mark{display:inline-block;width:.6em;height:.6em;margin-right:.2em;vertical-align:-.02em;fill:currentColor;overflow:visible}
 .logo-mark .logo-mark-accent{opacity:.5}
 .site-nav .logo{display:inline-flex;align-items:center}
+
+/* Sticky nav: fixed to the top. Over the hero it stays transparent; once the page scrolls it gets a solid ink bar and shrinks. */
+html{scroll-padding-top:96px}
+.site-nav{position:fixed !important;transition:height .3s ease,background .3s ease,box-shadow .3s ease !important}
+.site-nav .logo{transition:font-size .3s ease}
+.site-nav.is-scrolled{height:76px !important;background:rgba(23,35,31,.96) !important;box-shadow:0 1px 0 rgba(238,229,212,.08),0 10px 30px rgba(0,0,0,.18) !important;backdrop-filter:blur(8px)}
+.site-nav.is-scrolled .logo{font-size:40px !important;text-shadow:none}
+.site-nav.is-scrolled .nav-links a{text-shadow:none}
+.site-nav.is-scrolled .nav-dropdown-menu{top:calc(100% + 14px)}
+@media (max-width:900px){
+  .site-nav.is-scrolled{height:68px !important}
+  .site-nav.is-scrolled .logo{font-size:34px !important}
+}
+@media (prefers-reduced-motion:reduce){.site-nav,.site-nav .logo{transition:none !important}}
