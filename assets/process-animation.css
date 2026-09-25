@@ -84,3 +84,26 @@
     transition: none !important;
   }
 }
+
+/* Q4 Method cards: each card holds the same mosaic at its own stage, assembling on scroll */
+.q-capability-overhaul .overview-visual svg.mini-mosaic{width:150px;height:150px;overflow:visible}
+.q-capability-overhaul .overview-visual[data-mm]{height:156px}
+.mini-mosaic .t{fill:var(--c);transform-box:fill-box;transform-origin:center;
+  transition:transform 1.1s cubic-bezier(.2,.75,.25,1) calc(var(--d) + var(--k,0s)),opacity .7s ease calc(var(--d) + var(--k,0s)),fill .8s ease calc(var(--d) + var(--k,0s))}
+.mini-mosaic .t-champ{fill:#c49a45}
+[data-mm="1"] .t{--k:.35s}[data-mm="2"] .t{--k:.7s}[data-mm="3"] .t{--k:1.05s}
+/* Understand: scattered, muted */
+[data-mm="0"] .t-q{transform:translate(var(--dx),var(--dy)) rotate(var(--r));fill:var(--g);opacity:.75}
+[data-mm="0"] .t-s,[data-mm="0"] .t-c{transform:translate(var(--dx),var(--dy)) rotate(var(--r)) scale(.3);opacity:0}
+/* Design: four quarters, centre open */
+[data-mm="1"] .t-q{opacity:.55}[data-mm="1"] .t-champ{fill:var(--c)}
+[data-mm="1"] .t-s,[data-mm="1"] .t-c{transform:scale(.3);opacity:0}
+/* Build: grout joins the quarters */
+[data-mm="2"] .t-q{opacity:.9}[data-mm="2"] .t-champ{fill:var(--c)}
+[data-mm="2"] .t-c{transform:scale(.3);opacity:0}
+/* Before the section is in view every card starts as loose pieces */
+.mm-wait .mini-mosaic .t-q{transform:translate(var(--dx),var(--dy)) rotate(var(--r));fill:var(--g);opacity:.75}
+.mm-wait .mini-mosaic .t-s,.mm-wait .mini-mosaic .t-c{transform:translate(var(--dx),var(--dy)) rotate(var(--r)) scale(.3);opacity:0}
+[data-mm="0"].mm-wait .t-q{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--r)) scale(.5)}
+@media (max-width:850px){.overview-visual[data-mm] .t{--k:0s}}
+@media (prefers-reduced-motion:reduce){.mini-mosaic .t{transition:none !important}}
