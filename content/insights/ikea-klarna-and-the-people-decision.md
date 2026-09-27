@@ -1,7 +1,7 @@
 ---
 title: "IKEA, Klarna and the people decision"
 date: 2026-09-27
-author: "Roald van Buuren"
+author: "Jan Hoffmann"
 kind: Opinion
 summary: "Two European companies put AI on the same job: answering routine customer questions. One ended up with 8,500 people in better jobs and a billion-euro sales channel. The other ended up explaining in public why it needed humans back. The difference was a decision about people."
 ---
