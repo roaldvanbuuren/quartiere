@@ -44,9 +44,9 @@
 }
 
 .p-crumb {
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.16em;
-  text-transform:lowercase;
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
+  text-transform:none;
   color:rgba(238,229,212,.6)
 }
 
@@ -82,9 +82,9 @@
   padding:0 13px;
   margin-top:34px;
   border:1px solid rgba(238,229,212,.3);
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.12em;
-  text-transform:lowercase;
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
+  text-transform:none;
   color:rgba(238,229,212,.85)
 }
 
@@ -100,9 +100,9 @@
   align-items:center;
   gap:10px;
   padding:14px 20px;
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.14em;
-  text-transform:lowercase;
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
+  text-transform:none;
   border:1px solid rgba(238,229,212,.6);
   color:var(--paper)
 }
@@ -140,9 +140,9 @@
 }
 
 .p-shot span {
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.14em;
-  text-transform:lowercase;
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
+  text-transform:none;
   color:#777066
 }
 
@@ -167,9 +167,10 @@
 }
 
 .p-step span {
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.14em;
-  color:var(--blue);text-transform:lowercase}
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
+  color:var(--blue)
+}
 
 .p-step h3 {
   font:400 40px/.95 'Instrument Serif';
@@ -210,9 +211,9 @@
 }
 
 .p-use a {
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.12em;
-  text-transform:lowercase;
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
+  text-transform:none;
   color:var(--blue);
   padding-top:4px
 }
@@ -238,9 +239,9 @@
 }
 
 .p-spec dt {
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.14em;
-  text-transform:lowercase;
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
+  text-transform:none;
   color:#777066;
   padding-top:4px
 }
@@ -274,9 +275,9 @@
 }
 
 .p-method span {
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.14em;
-  text-transform:lowercase;
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
+  text-transform:none;
   color:rgba(238,229,212,.55)
 }
 
@@ -322,9 +323,9 @@
 }
 
 .p-others span {
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.14em;
-  text-transform:lowercase;
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
+  text-transform:none;
   color:#777066
 }
 
@@ -367,9 +368,9 @@
   align-items:center;
   gap:10px;
   margin-top:26px;
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.14em;
-  text-transform:lowercase;
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
+  text-transform:none;
   border-bottom:1px solid currentColor;
   padding-bottom:6px;
   align-self:flex-start
@@ -398,10 +399,11 @@
 }
 
 .i-item .i-num {
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.14em;
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
   color:var(--blue);
-  padding-top:10px;text-transform:lowercase}
+  padding-top:10px
+}
 
 .i-item h3 {
   font:400 clamp(34px,3.6vw,54px)/.98 'Instrument Serif';
@@ -418,9 +420,9 @@
 }
 
 .i-item .i-meta {
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.12em;
-  text-transform:lowercase;
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
+  text-transform:none;
   color:#777066;
   text-align:right;
   padding-top:10px
@@ -520,9 +522,9 @@
 .p-stats-grid span {
   display:block;
   margin-top:14px;
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.14em;
-  text-transform:lowercase;
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
+  text-transform:none;
   color:rgba(238,229,212,.6)
 }
 
@@ -549,9 +551,9 @@
 }
 
 .p-compare thead th {
-  font:10px 'Quartiere Label',serif;
-  letter-spacing:.14em;
-  text-transform:lowercase;
+  font:600 12px Manrope,sans-serif;
+  letter-spacing:0;
+  text-transform:none;
   color:#777066;
   font-weight:400
 }
@@ -606,13 +608,15 @@
 
   .p-compare td:first-of-type:before {
     content:'Polysoma · ';
-    font:10px 'Quartiere Label',serif;
-    color:var(--blue);text-transform:lowercase}
+    font:600 12px Manrope,sans-serif;
+    color:var(--blue)
+  }
 
   .p-compare td:last-of-type:before {
     content:'Survey panel · ';
-    font:10px 'Quartiere Label',serif;
-    color:#777066;text-transform:lowercase}
+    font:600 12px Manrope,sans-serif;
+    color:#777066
+  }
 
 }
 
@@ -680,7 +684,7 @@
 /* Product video */
 .p-video{margin:0}
 .p-video video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#0b0f14;border:1px solid var(--line)}
-.p-video figcaption{margin-top:12px;font:10px 'Quartiere Label',serif;letter-spacing:.14em;text-transform:lowercase;color:#777066}
+.p-video figcaption{margin-top:12px;font:600 12px Manrope,sans-serif;letter-spacing:0;text-transform:none;color:#777066}
 
 /* Vigil overview: one place to ask */
 .vg{margin:0;background:#101a17;color:#eee5d4;border:1px solid rgba(23,35,31,.6)}
@@ -757,22 +761,22 @@
 /* Insights articles */
 .a-hero{padding:190px 0 90px}
 .a-hero .a-title{font:400 clamp(56px,7vw,110px)/.9 'Instrument Serif';letter-spacing:-.05em;margin:30px 0 24px;max-width:1100px}
-.a-meta{margin-top:30px;font:10px 'Quartiere Label',serif;letter-spacing:.14em;text-transform:lowercase;color:rgba(238,229,212,.6)}
+.a-meta{margin-top:30px;font:600 12px Manrope,sans-serif;letter-spacing:0;text-transform:none;color:rgba(238,229,212,.6)}
 .a-body{width:min(760px,calc(100% - 36px));margin:0 auto;padding:90px 0 110px;font-size:18px;line-height:1.8;color:#2e332f}
 .a-body p{margin:0 0 22px}
 .a-body h2{font:400 clamp(38px,4vw,56px)/1 'Instrument Serif';letter-spacing:-.03em;color:#17231f;margin:10px 0 26px}
 .a-body h3{font:400 32px/1.05 'Instrument Serif';color:#17231f;margin:8px 0 14px}
-.a-label{display:block;margin-top:70px;font:10px 'Quartiere Label',serif;letter-spacing:.14em;text-transform:lowercase;color:#2a70a1}
+.a-label{display:block;margin-top:70px;font:600 12px Manrope,sans-serif;letter-spacing:0;text-transform:none;color:#2a70a1}
 .a-body>.a-label:first-child{margin-top:0}
 .a-callout{margin:40px 0;padding:28px 0;border-top:1px solid #17231f;border-bottom:1px solid #17231f;font:400 clamp(26px,2.6vw,36px)/1.15 'Instrument Serif';color:#17231f}
 .a-table{overflow-x:auto;margin:36px 0}
 .a-table table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.6}
-.a-table th{text-align:left;font:400 10px 'Quartiere Label',serif;letter-spacing:.14em;text-transform:lowercase;color:#777066;padding:12px 16px 12px 0;border-bottom:1px solid rgba(23,35,31,.35)}
+.a-table th{text-align:left;font:600 12px Manrope,sans-serif;letter-spacing:0;text-transform:none;color:#777066;padding:12px 16px 12px 0;border-bottom:1px solid rgba(23,35,31,.35)}
 .a-table td{padding:14px 16px 14px 0;border-bottom:1px solid rgba(23,35,31,.15);vertical-align:top}
 .a-table td:first-child{color:#17231f;font-weight:600}
 .a-table table{table-layout:auto}.a-table th,.a-table td{min-width:120px}
 .a-table td:first-child,.a-table th:first-child{width:28%}
-@media(max-width:700px){.a-table table,.a-table thead,.a-table tbody,.a-table tr,.a-table td{display:block;width:auto!important;min-width:0}.a-table thead{display:none}.a-table tr{border-bottom:1px solid rgba(23,35,31,.35);padding:14px 0}.a-table td{border:0;padding:4px 0}.a-table td[data-h]::before{content:attr(data-h);display:block;font:400 10px 'Quartiere Label',serif;letter-spacing:.14em;text-transform:lowercase;color:#777066;margin-top:6px}}
+@media(max-width:700px){.a-table table,.a-table thead,.a-table tbody,.a-table tr,.a-table td{display:block;width:auto!important;min-width:0}.a-table thead{display:none}.a-table tr{border-bottom:1px solid rgba(23,35,31,.35);padding:14px 0}.a-table td{border:0;padding:4px 0}.a-table td[data-h]::before{content:attr(data-h);display:block;font:600 12px Manrope,sans-serif;letter-spacing:0;text-transform:none;color:#777066;margin-top:6px}}
 .a-case{border-top:1px solid rgba(23,35,31,.22);padding-top:26px;margin-top:40px}
 .a-case .a-label{margin-top:0}
 .a-notes{margin-top:70px;padding-top:24px;border-top:1px solid rgba(23,35,31,.22);font-size:15px;color:#4f4d45}

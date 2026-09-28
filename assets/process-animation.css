@@ -13,7 +13,7 @@
 .q-process-svg{color:var(--ink);overflow:visible}
 .q-mosaic .t{fill:var(--c);transform-box:fill-box;transform-origin:center;
   transition:transform 1s cubic-bezier(.2,.75,.25,1) var(--d),opacity .6s ease var(--d),fill .7s ease var(--d)}
-.q-mosaic .q-caption{fill:var(--muted);font:9px 'Quartiere Label',serif;letter-spacing:.14em;opacity:.8;text-transform:lowercase}
+.q-mosaic .q-caption{fill:var(--muted);font:600 12px Manrope,sans-serif;letter-spacing:0;opacity:.8}
 
 /* 01 Understand: loose, muted pieces scattered over the table */
 .q-process[data-stage="0"] .q-mosaic .t-q{transform:translate(var(--dx),var(--dy)) rotate(var(--r));fill:var(--g);opacity:.75}

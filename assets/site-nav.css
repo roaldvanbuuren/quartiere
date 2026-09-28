@@ -30,18 +30,19 @@
   text-shadow:0 1px 16px rgba(0,0,0,.4);
 }
 .site-nav .logo span{
-  font:12px/1 'Quartiere Label',serif !important;
-  letter-spacing:.16em !important;
+  font:600 14px/1 Manrope,sans-serif !important;
+  letter-spacing:0;
   vertical-align:middle !important;
   margin-left:10px !important;
-  color:#f6efe2 !important;text-transform:lowercase}
+  color:#f6efe2 !important;
+}
 .site-nav .nav-links{
   display:flex !important;
   align-items:center !important;
   gap:32px !important;
-  font:14px/1 'Quartiere Label',serif !important;
-  letter-spacing:.14em !important;
-  text-transform:lowercase !important;
+  font:600 17px/1 Manrope,sans-serif !important;
+  letter-spacing:0;
+  text-transform:none !important;
 }
 .site-nav .nav-links a{
   color:#f6efe2 !important;
@@ -59,14 +60,14 @@
 .site-nav .nav-dropdown{position:relative;height:100%;display:flex;align-items:center}
 .site-nav .nav-dropdown>a{display:flex;align-items:center;gap:7px}
 .site-nav .nav-dropdown-menu{position:absolute;top:calc(100% + 24px);left:-20px;min-width:240px;padding:12px;background:#eeeae3;border:1px solid rgba(23,35,31,.16);box-shadow:0 18px 36px rgba(0,0,0,.14);display:grid;gap:0;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .18s ease,transform .18s ease,visibility .18s;z-index:100}
-.site-nav .nav-dropdown-menu a{display:block;padding:12px 10px;color:#292b29!important;text-shadow:none!important;font-size:11px;line-height:1.35;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.site-nav .nav-dropdown-menu a{display:block;padding:12px 10px;color:#292b29!important;text-shadow:none!important;font-size:13px;line-height:1.35;letter-spacing:0;text-transform:none;white-space:nowrap}
 .site-nav .nav-dropdown-menu a:hover{background:rgba(23,35,31,.07);text-decoration:none}
 .site-nav .nav-dropdown:hover .nav-dropdown-menu,.site-nav .nav-dropdown:focus-within .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
 .site-nav .nav-dropdown>a:focus-visible,.site-nav .nav-dropdown-menu a:focus-visible{outline:2px solid #9bbdd1;outline-offset:3px}
 @media (max-width:900px){
   .site-nav{height:92px !important; padding:0 18px !important;}
   .site-nav .logo{font-size:42px !important;}
-  .site-nav .logo span{font-size:11px !important;}
+  .site-nav .logo span{font-size:12px !important;}
   .site-nav .nav-links{gap:18px !important; font-size:12px !important;}
 }
 @media (max-width:650px){

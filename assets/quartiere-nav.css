@@ -30,18 +30,19 @@
   text-shadow:0 1px 16px rgba(0,0,0,.4);
 }
 .site-nav .logo span{
-  font:12px/1 'Quartiere Label',serif !important;
-  letter-spacing:.16em !important;
+  font:600 14px/1 Manrope,sans-serif !important;
+  letter-spacing:0;
   vertical-align:middle !important;
   margin-left:10px !important;
-  color:#f6efe2 !important;text-transform:lowercase}
+  color:#f6efe2 !important;
+}
 .site-nav .nav-links{
   display:flex !important;
   align-items:center !important;
   gap:32px !important;
-  font:14px/1 'Quartiere Label',serif !important;
-  letter-spacing:.14em !important;
-  text-transform:lowercase !important;
+  font:600 17px/1 Manrope,sans-serif !important;
+  letter-spacing:0;
+  text-transform:none !important;
 }
 .site-nav .nav-links a{
   color:#f6efe2 !important;
@@ -56,14 +57,14 @@
 .site-nav .nav-dropdown{position:relative;height:100%;display:flex;align-items:center}
 .site-nav .nav-dropdown>a{display:flex;align-items:center;gap:7px}
 .site-nav .nav-dropdown-menu{position:absolute;top:calc(100% + 24px);left:-20px;min-width:240px;padding:12px;background:#eeeae3;border:1px solid rgba(23,35,31,.16);box-shadow:0 18px 36px rgba(0,0,0,.14);display:grid;gap:0;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .18s ease,transform .18s ease,visibility .18s;z-index:100}
-.site-nav .nav-dropdown-menu a{display:block;padding:12px 10px;color:#292b29!important;text-shadow:none!important;font-size:11px;line-height:1.35;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.site-nav .nav-dropdown-menu a{display:block;padding:12px 10px;color:#292b29!important;text-shadow:none!important;font-size:13px;line-height:1.35;letter-spacing:0;text-transform:none;white-space:nowrap}
 .site-nav .nav-dropdown-menu a:hover{background:rgba(23,35,31,.07);text-decoration:none}
 .site-nav .nav-dropdown:hover .nav-dropdown-menu,.site-nav .nav-dropdown:focus-within .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
 .site-nav .nav-dropdown>a:focus-visible,.site-nav .nav-dropdown-menu a:focus-visible{outline:2px solid #9bbdd1;outline-offset:3px}
 @media (max-width:900px){
   .site-nav{height:92px !important; padding:0 18px !important;}
   .site-nav .logo{font-size:42px !important;}
-  .site-nav .logo span{font-size:11px !important;}
+  .site-nav .logo span{font-size:12px !important;}
   .site-nav .nav-links{gap:18px !important; font-size:12px !important;}
 }
 @media (max-width:650px){
@@ -125,9 +126,9 @@ section.contact a,
   border-radius:0 !important;
   background:transparent !important;
   color:#eee5d4 !important;
-  font:400 10px/1 'Quartiere Label',serif !important;
-  letter-spacing:.14em !important;
-  text-transform:lowercase !important;
+  font:600 12px/1 Manrope,sans-serif !important;
+  letter-spacing:0;
+  text-transform:none !important;
   text-decoration:none !important;
   cursor:pointer;
   transition:background .2s ease,color .2s ease,border-color .2s ease !important;
@@ -153,9 +154,9 @@ section.contact a:hover,
   border-radius:0 !important;
   background:#17231f !important;
   color:#eee5d4 !important;
-  font:400 10px/1 'Quartiere Label',serif !important;
-  letter-spacing:.14em !important;
-  text-transform:lowercase !important;
+  font:600 12px/1 Manrope,sans-serif !important;
+  letter-spacing:0;
+  text-transform:none !important;
   cursor:pointer;
 }
 .form button:hover,.enquiry-form button:hover{background:#354536 !important}
@@ -182,11 +183,11 @@ html{scroll-padding-top:96px}
 /* Closing call to action, shared by every page */
 .site-cta{background:#17231f;color:#eee5d4;padding:130px 0}
 .site-cta-inner{width:min(1440px,calc(100% - 72px));margin:auto}
-.site-cta-kicker{font:10px 'Quartiere Label',serif;letter-spacing:.16em;text-transform:lowercase}
+.site-cta-kicker{font:600 12px Manrope,sans-serif;letter-spacing:0;text-transform:none}
 .site-cta h2{font:400 clamp(75px,10vw,150px)/.78 'Instrument Serif';letter-spacing:-.065em;margin:20px 0 45px;max-width:1000px;color:#eee5d4}
 .site-cta h2 em{font-style:italic;color:#d9cfbd}
 .site-cta p{color:rgba(238,229,212,.7);max-width:520px;line-height:1.75;font-size:15px;margin:0}
-.site-cta-btn{display:inline-block;margin-top:35px;border:1px solid rgba(238,229,212,.45);padding:13px 18px;font:10px 'Quartiere Label',serif;letter-spacing:.12em;text-transform:lowercase;color:#eee5d4;background:none;cursor:pointer;text-decoration:none;transition:background .2s ease,color .2s ease}
+.site-cta-btn{display:inline-block;margin-top:35px;border:1px solid rgba(238,229,212,.45);padding:13px 18px;font:600 12px Manrope,sans-serif;letter-spacing:0;text-transform:none;color:#eee5d4;background:none;cursor:pointer;text-decoration:none;transition:background .2s ease,color .2s ease}
 .site-cta-btn:hover{background:#eee5d4;color:#17231f}
 @media(max-width:900px){.site-cta{padding:90px 0}.site-cta-inner{width:calc(100% - 36px)}}
 .dark-band + .site-cta{border-top:1px solid rgba(238,229,212,.12)}
