@@ -30,19 +30,18 @@
   text-shadow:0 1px 16px rgba(0,0,0,.4);
 }
 .site-nav .logo span{
-  font:12px/1 "DM Mono",monospace !important;
+  font:12px/1 'Quartiere Label',serif !important;
   letter-spacing:.16em !important;
   vertical-align:middle !important;
   margin-left:10px !important;
-  color:#f6efe2 !important;
-}
+  color:#f6efe2 !important;text-transform:lowercase}
 .site-nav .nav-links{
   display:flex !important;
   align-items:center !important;
   gap:32px !important;
-  font:14px/1 "DM Mono",monospace !important;
+  font:14px/1 'Quartiere Label',serif !important;
   letter-spacing:.14em !important;
-  text-transform:uppercase !important;
+  text-transform:lowercase !important;
 }
 .site-nav .nav-links a{
   color:#f6efe2 !important;
