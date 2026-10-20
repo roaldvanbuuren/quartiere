@@ -790,11 +790,7 @@ a.i-item:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-u
 .a-todo{background:#f3d9a4;color:#17231f;padding:0 4px}
 .a-body td{font-size:14px}
 
-/* Pages without a dedicated image banner (Trust, Privacy, Cookies, Insights posts, Q4 Labs products) use the brand blue as the header */
-.p-hero {
-  background:var(--blue)
-}
-
+/* Pages without a dedicated image banner (Trust, Privacy, Cookies, Insights posts, Q4 Labs products) use the hero sky blue as the header */
 .p-hero .p-crumb,
 .p-hero .a-meta {
   color:rgba(238,229,212,.9)
@@ -813,15 +809,17 @@ a.i-item:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-u
   color:var(--paper)
 }
 
-.p-hero.p-pattern-polysoma:after {
-  background-image:radial-gradient(circle,rgba(238,229,212,.7) 0 1.5px,transparent 2px),repeating-linear-gradient(45deg,transparent 0 17px,rgba(238,229,212,.22) 17px 18px),repeating-linear-gradient(-45deg,transparent 0 17px,rgba(238,229,212,.22) 17px 18px)
+/* The old dot disc is removed from these headers; the clouds replace it */
+.p-hero:after {
+  display:none
 }
 
 /* Header sky: drifting halftone clouds and faint digital rain, echoing the hero images */
 .p-hero {
-  background-color:var(--blue);
+  --sky:#195596;
+  background-color:var(--sky);
   background-image:
-    linear-gradient(180deg,transparent 35%,var(--blue) 95%),
+    linear-gradient(180deg,transparent 35%,var(--sky) 95%),
     repeating-linear-gradient(90deg,transparent 0 37px,rgba(238,229,212,.11) 37px 38px),
     repeating-linear-gradient(90deg,transparent 0 53px,rgba(238,229,212,.08) 53px 54px),
     repeating-linear-gradient(90deg,transparent 0 71px,rgba(238,229,212,.1) 71px 72px),
@@ -864,12 +862,12 @@ a.i-item:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-u
   left:calc(50% - 50vw);
   width:100vw;
   pointer-events:none;
-  background:linear-gradient(90deg,rgba(42,112,161,.8) 0,rgba(42,112,161,.62) 42%,rgba(42,112,161,0) 78%)
+  background:linear-gradient(90deg,rgba(25,85,150,.8) 0,rgba(25,85,150,.62) 42%,rgba(25,85,150,0) 78%)
 }
 
 @media (max-width:900px) {
   .p-hero .container:before {
-    background:rgba(42,112,161,.55)
+    background:rgba(25,85,150,.55)
   }
 }
 
