@@ -789,3 +789,30 @@ a.i-item:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-u
 /* Legal pages */
 .a-todo{background:#f3d9a4;color:#17231f;padding:0 4px}
 .a-body td{font-size:14px}
+
+/* Pages without a dedicated image banner (Trust, Privacy, Cookies, Insights posts, Q4 Labs products) use the brand blue as the header */
+.p-hero {
+  background:var(--blue)
+}
+
+.p-hero .p-crumb,
+.p-hero .a-meta {
+  color:rgba(238,229,212,.9)
+}
+
+.p-hero .p-crumb a {
+  border-bottom-color:rgba(238,229,212,.6)
+}
+
+.p-hero .p-lede {
+  color:var(--paper)
+}
+
+.p-hero .p-type {
+  border-color:rgba(238,229,212,.55);
+  color:var(--paper)
+}
+
+.p-hero.p-pattern-polysoma:after {
+  background-image:radial-gradient(circle,rgba(238,229,212,.7) 0 1.5px,transparent 2px),repeating-linear-gradient(45deg,transparent 0 17px,rgba(238,229,212,.22) 17px 18px),repeating-linear-gradient(-45deg,transparent 0 17px,rgba(238,229,212,.22) 17px 18px)
+}
