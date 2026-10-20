@@ -4,7 +4,6 @@ date: 2026-08-27
 author: "Roald van Buuren"
 kind: Opinion
 summary: "Gaming shows in data what a CV or a survey can only claim: how people actually decide under pressure."
-canonical: "https://elocollective.com/logs/the-federal-aviation-administration-hires-2000-gamers"
 ---
 
 The FAA has become one of the first large parties to realize the Power of Gaming as a way of of identifying capabilities that traditional education struggles to teach. Skills such as spatial awareness, multitasking, strong decision-making, sustained attention, and managing complexities under pressure are all normal for gamers, but not so much for the average person.

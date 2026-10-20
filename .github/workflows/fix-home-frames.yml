@@ -14,8 +14,8 @@ jobs:
         run: python3 scripts/fix_home_frames.py
       - name: Commit
         run: |
-          git config user.name ELOCollective
-          git config user.email tech@elocollective.com
+          git config user.name Quartiere
+          git config user.email hello@quartiere.si
           git add index.html what-we-do/index.html company/index.html contact/index.html
           git diff --cached --stat
           git commit -m "Point pages at new nav CSS and kill home hairlines inline" || echo no changes

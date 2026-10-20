@@ -4,7 +4,6 @@ date: 2026-01-12
 author: "Roald van Buuren"
 kind: Opinion
 summary: "The 1-9-90 rule, and why you should use the noise to investigate but the data to make the final call."
-canonical: "https://elocollective.com/logs/the-vocal-minority"
 ---
 
 When you are building a public product, whether a game, app or something else, the vocal minority vs. silent majority is one of the most difficult things to navigate, especially in the age of social media where every opinion polarizes to the extreme.
@@ -21,4 +20,4 @@ Try different things and see how people engage. Give your community tools to pla
 
 Finally, always cross reference sentiment with actual data. The vocal minority might be loud about a specific balance change or a UI update, but your internal metrics might show that the silent majority is actually playing more or completing tasks faster. Use the noise to investigate, but use the data to make the final call. Always make sure to actively engage with the vocal minority and explain your decision-making process.
 
-At ELO that is exactly what we do. We build tools for the community to engage with on Discord so you can see firsthand what resonates. By giving them something to interact with, you get a much better understanding of how to engage them better and what they actually value. Reach out to us if you want to start building a better connection with your majority, and turn the trolls into advocates.
+If you want to build a better connection with your majority, and turn the trolls into advocates, get in touch.

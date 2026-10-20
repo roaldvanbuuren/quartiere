@@ -14,8 +14,8 @@ jobs:
         run: python3 scripts/replace_mosaics.py
       - name: Commit
         run: |
-          git config user.name ELOCollective
-          git config user.email tech@elocollective.com
+          git config user.name Quartiere
+          git config user.email hello@quartiere.si
           git add assets/mosaic-*.jpg index.html what-we-do/index.html company/index.html
           git diff --cached --stat
           git commit -m "Replace repeated inline mosaics with themed asset images" || echo no changes
