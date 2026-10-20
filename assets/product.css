@@ -33,11 +33,6 @@
   background-size:22px 22px
 }
 
-.p-hero.p-pattern-lumen:after {
-  background-image:repeating-radial-gradient(circle at 50% 50%,transparent 0 12px,rgba(238,229,212,.35) 13px 14px,transparent 15px 26px);
-  background-size:auto
-}
-
 .p-hero .container {
   position:relative;
   z-index:2
@@ -305,7 +300,7 @@
 /* Other systems */
 .p-others {
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(2,1fr);
   border-top:1px solid var(--line);
   border-left:1px solid var(--line)
 }
@@ -658,16 +653,6 @@
 .pc-foot{padding:14px 20px;border-top:1px solid rgba(238,229,212,.14);font:10px 'DM Mono';letter-spacing:.12em;text-transform:uppercase;color:rgba(238,229,212,.5)}
 @media(max-width:900px){.pc-grid{grid-template-columns:1fr}.pc-col+.pc-col{border-left:0;border-top:1px solid rgba(238,229,212,.14)}.pc-bar{flex-direction:column}}
 
-/* Lumen hero: depth-field animation (trylumen.io) */
-.p-hero.has-depth:after { display:none }
-.depth-field { position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:0 }
-.depth-field canvas { position:absolute; inset:0; width:100%; height:100%; opacity:0; transition:opacity .9s ease }
-.depth-field canvas.is-ready { opacity:1 }
-.depth-field:after { content:''; position:absolute; inset:0; background:repeating-linear-gradient(to bottom, rgba(0,0,0,.42) 0 1px, transparent 1px 4px) }
-.depth-field-shade { position:absolute; inset:0; z-index:1; pointer-events:none;
-  background:linear-gradient(90deg, rgba(23,35,31,.92) 0%, rgba(23,35,31,.7) 34%, rgba(23,35,31,.15) 70%, rgba(23,35,31,0) 100%),
-             radial-gradient(ellipse 110% 85% at 60% 55%, transparent 45%, rgba(23,35,31,.6) 85%, rgba(23,35,31,.9) 100%) }
-@media(max-width:700px){ .depth-field-shade { background:linear-gradient(0deg, rgba(23,35,31,.92) 0%, rgba(23,35,31,.7) 55%, rgba(23,35,31,.35) 100%) } }
 
 /* Three use cases: one row of three columns, label above text */
 .p-uses.p-uses-3{grid-template-columns:repeat(3,1fr)}

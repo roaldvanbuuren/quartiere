@@ -9,7 +9,7 @@ Pages:
 - /                      Home
 - /what-we-do/           The Q4 Method
 - /industries/           Focus sectors
-- /q4-labs/              Systems overview, plus /vigil/ /polysoma/ /altiera/ /lumen/
+- /q4-labs/              Systems overview, plus /vigil/ /polysoma/ /altiera/
 - /insights/             Articles (generated, see below)
 - /trust/                Data handling
 - /company/

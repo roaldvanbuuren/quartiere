@@ -118,6 +118,10 @@ a {
   border-left:1px solid var(--line)
 }
 
+.labs-grid .lab:last-child:nth-child(odd) {
+  grid-column:1 / -1
+}
+
 .lab {
   min-height:560px;
   padding:34px;
