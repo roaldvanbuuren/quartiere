@@ -816,3 +816,63 @@ a.i-item:hover h3{text-decoration:underline;text-decoration-thickness:1px;text-u
 .p-hero.p-pattern-polysoma:after {
   background-image:radial-gradient(circle,rgba(238,229,212,.7) 0 1.5px,transparent 2px),repeating-linear-gradient(45deg,transparent 0 17px,rgba(238,229,212,.22) 17px 18px),repeating-linear-gradient(-45deg,transparent 0 17px,rgba(238,229,212,.22) 17px 18px)
 }
+
+/* Header sky: drifting halftone clouds and faint digital rain, echoing the hero images */
+.p-hero {
+  background-color:var(--blue);
+  background-image:
+    linear-gradient(180deg,transparent 35%,var(--blue) 95%),
+    repeating-linear-gradient(90deg,transparent 0 37px,rgba(238,229,212,.11) 37px 38px),
+    repeating-linear-gradient(90deg,transparent 0 53px,rgba(238,229,212,.08) 53px 54px),
+    repeating-linear-gradient(90deg,transparent 0 71px,rgba(238,229,212,.1) 71px 72px),
+    repeating-linear-gradient(90deg,transparent 0 97px,rgba(238,229,212,.07) 97px 99px)
+}
+
+.p-hero:before {
+  content:'';
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  width:calc(100% + 1200px);
+  pointer-events:none;
+  background-color:rgba(238,229,212,.18);
+  background-image:radial-gradient(circle,rgba(238,229,212,.6) 0 1.3px,transparent 1.7px);
+  background-size:6px 6px;
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Cdefs%3E%3Cfilter id='f' x='0' y='0' width='100%' height='100%'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0035 0.009' numOctaves='5' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 7 0 0 0 -3.3'/%3E%3C/filter%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='black'/%3E%3Cstop offset='.22' stop-color='white'/%3E%3Cstop offset='.72' stop-color='white'/%3E%3Cstop offset='1' stop-color='black'/%3E%3C/linearGradient%3E%3Cmask id='m'%3E%3Crect width='1200' height='600' fill='url(%23g)'/%3E%3C/mask%3E%3C/defs%3E%3Cg mask='url(%23m)'%3E%3Crect width='1200' height='600' filter='url(%23f)'/%3E%3C/g%3E%3C/svg%3E");
+  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'%3E%3Cdefs%3E%3Cfilter id='f' x='0' y='0' width='100%' height='100%'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.0035 0.009' numOctaves='5' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 7 0 0 0 -3.3'/%3E%3C/filter%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='black'/%3E%3Cstop offset='.22' stop-color='white'/%3E%3Cstop offset='.72' stop-color='white'/%3E%3Cstop offset='1' stop-color='black'/%3E%3C/linearGradient%3E%3Cmask id='m'%3E%3Crect width='1200' height='600' fill='url(%23g)'/%3E%3C/mask%3E%3C/defs%3E%3Cg mask='url(%23m)'%3E%3Crect width='1200' height='600' filter='url(%23f)'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask-size:1200px 100%;
+  mask-size:1200px 100%;
+  -webkit-mask-repeat:repeat-x;
+  mask-repeat:repeat-x;
+  animation:p-drift 140s linear infinite;
+  will-change:transform
+}
+
+@keyframes p-drift {
+  from { transform:translateX(0) }
+  to { transform:translateX(-1200px) }
+}
+
+/* Keeps the text side calm so small type stays readable over the clouds */
+.p-hero .container:before {
+  content:'';
+  position:absolute;
+  z-index:-1;
+  top:-260px;
+  bottom:-160px;
+  left:calc(50% - 50vw);
+  width:100vw;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(42,112,161,.8) 0,rgba(42,112,161,.62) 42%,rgba(42,112,161,0) 78%)
+}
+
+@media (max-width:900px) {
+  .p-hero .container:before {
+    background:rgba(42,112,161,.55)
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .p-hero:before { animation:none }
+}
